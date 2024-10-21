@@ -54,13 +54,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-
-
   test:
     runs-on: ubuntu-latest
     steps:
     
-      # generates coverage-report.md and publishes as checkrun
       - name: JaCoCo Code Coverage Report
         id: jacoco_reporter
         uses: PavanMudigonda/jacoco-reporter@v5.0
@@ -74,8 +71,7 @@ jobs:
           fail_below_threshold: false
           publish_only_summary: false
       
-      # Publish Coverage Job Summary  # Optional
-      - name: Add Jacocoo report to workflow run summary
+      - name: Add Jacoco report to workflow run summary
         run: |
           echo "| Outcome | Value |" >> $GITHUB_STEP_SUMMARY
           echo "| --- | --- |" >> $GITHUB_STEP_SUMMARY
@@ -84,13 +80,9 @@ jobs:
           echo "| :x: Number of Lines Missed | ${{ steps.jacoco_reporter.outputs.missed_lines }} |" >> $GITHUB_STEP_SUMMARY
           echo "| Total Number of Lines | ${{ steps.jacoco_reporter.outputs.total_lines }} |" >> $GITHUB_STEP_SUMMARY
           
-      # uploads the coverage-report.md artifact  # Optional
-      
       - name: Upload Code Coverage Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: code-coverage-report-markdown
-          path: */coverage-results.md 
+          path: coverage-results.md  # Specify full path without wildcard
           retention-days: 1  
-
-     
