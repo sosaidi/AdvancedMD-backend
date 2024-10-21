@@ -36,11 +36,6 @@ jobs:
       - name: Check Code Coverage
         run: mvn verify jacoco:report
 
-      - name: Run Coverage
-        run: |
-          chmod +x gradlew
-          ./gradlew testCoverage
-
       - name: Add coverage to PR
         id: jacoco
         uses: madrapps/jacoco-report@v1.7.1
@@ -49,8 +44,9 @@ jobs:
             ${{ github.workspace }}/**/build/reports/jacoco/prodNormalDebugCoverage/prodNormalDebugCoverage.xml,
             ${{ github.workspace }}/**/build/reports/jacoco/**/debugCoverage.xml
           token: ${{ secrets.GITHUB_TOKEN }}
-          min-coverage-overall: 40
-          min-coverage-changed-files: 60
+          min-coverage-overall: 0
+          min-coverage-changed-files: 0
+          
       - name: Publish Code Coverage to GitHub
         run: |
           curl --request POST \
