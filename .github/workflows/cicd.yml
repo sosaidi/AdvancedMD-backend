@@ -70,6 +70,21 @@ jobs:
 
       - name: Run Unit Tests
         run: mvn test
+        
+      - name: Check Code Coverage
+        run: mvn verify jacoco:report
+
+      - name: Publish Code Coverage to GitHub
+        run: |
+          curl --request POST \
+            --url https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} \
+            --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+            --header 'content-type: application/json' \
+            --data '{
+                "state": "success",
+                "description": "Code coverage report published",
+                "context": "coverage"
+              }'
 
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v3
@@ -77,5 +92,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Code Coverage Report Action
-        uses: insightsengineering/coverage-action@v2.7.1
+     
