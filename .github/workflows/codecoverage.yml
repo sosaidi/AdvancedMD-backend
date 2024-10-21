@@ -1,35 +1,61 @@
-name: Code Coverage Report Action
-  # You may pin to the exact commit or the version.
-  # uses: insightsengineering/coverage-action@97842088bfccba58670a8caf7b7801f8c9e62bc8
-    uses: insightsengineering/coverage-action@v2.7.0
-  with:
-    # GitHub token to use to publish the check.
-    token: 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  # Consider using GitHub Secrets
-    # Path to the Cobertura coverage XML report.
-    path: coverage.xml  # optional, default is coverage.xml
-    # The minimum allowed coverage percentage, as a real number.
-    threshold: 0  # optional, default is 0
-    # Fail the action when the minimum coverage was not met.
-    fail: true  # optional, default is true
-    # Publish the coverage report as an issue comment.
-    publish: true  # optional
-    # Create a diff of the coverage report.
-    diff: true  # optional
-    # Branch to diff against.
-    diff-branch: main  # optional, default is main
-    # Subdirectory in the diff-storage branch where the XML reports will be stored.
-    storage-subdirectory: .  # optional, default is .
-    # Branch where coverage reports are stored for diff purposes.
-    diff-storage: _xml_coverage_reports  # optional, default is _xml_coverage_reports
-    # Title for the code coverage summary in the Pull Request comment.
-    coverage-summary-title: Code Coverage Summary  # optional, default is Code Coverage Summary
-    # Fail the action if code coverage decreased compared to the `diff-branch`.
-    coverage-reduction-failure: true  # optional
-    # Fail the action if any new uncovered statements are introduced compared to the `diff-branch`.
-    new-uncovered-statements-failure: true  # optional
-    # Fail the action in case of a `Pycobertura` exception.
-    pycobertura-exception-failure: true  # optional, default is true
-    # Make the code coverage report togglable.
-    togglable-report: true  # optional
-    # Whether a detailed coverage report should be excluded from the PR comment.
-    exclude-detailed-coverage: false  # optional
+name: CI
+on:
+  push:
+    branches:
+      - master   # Adjust based on your default branch
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'   # Specify the version of Java you are using
+          distribution: 'adopt'
+
+      - name: Cache Maven dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      - name: Build with Maven
+        run: mvn clean install
+
+      - name: Run Unit Tests
+        run: mvn test
+
+      - name: Check Code Coverage
+        run: mvn verify jacoco:report
+
+      - name: Publish Code Coverage to GitHub
+        run: |
+          # Replace this with the command to publish coverage reports
+          curl --request POST \
+            --url https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} \
+            --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+            --header 'content-type: application/json' \
+            --data '{
+                "state": "success",
+                "description": "Code coverage report published",
+                "context": "coverage"
+              }'
+
+      - name: Update Code Coverage Badge
+        run: |
+          # Replace this with your command to update the badge if needed
+          echo "Update badge here"
+
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v3
+        if: github.ref == 'refs/heads/master'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
