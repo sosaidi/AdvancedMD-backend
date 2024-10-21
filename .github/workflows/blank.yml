@@ -1,58 +1,62 @@
-name: ci
-on: push
+name: CI
+on:
+  push:
+    branches:
+      - master   # Adjust based on your default branch
+  pull_request:
+
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout 🛎
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install NPM dependencies 📦
-        uses: bahmutov/npm-install@v1
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'   # Specify the version of Java you are using
+          distribution: 'adopt'
 
-      - name: Unit tests 🧪
-        run: npm test
+      - name: Cache Maven dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
 
-      - name: Check all covered files 📊
+      - name: Build with Maven
+        run: mvn clean install
+
+      - name: Run Unit Tests
+        run: mvn test
+
+      - name: Check Code Coverage
+        run: mvn verify jacoco:report
+
+      - name: Publish Code Coverage to GitHub
         run: |
-          node bin/check-coverage main1.js
-          node bin/check-coverage to/main2.js
-          node bin/only-covered main1.js main2.js
-          # and can check multiple files at once
-          node bin/check-coverage main1.js main2.js
-
-      - name: Check totals 🛡
-        run: node bin/check-total --min 30
-
-      - name: Set commit status using REST
-        # https://developer.github.com/v3/repos/statuses/
-        run: |
+          # Replace this with the command to publish coverage reports
           curl --request POST \
             --url https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} \
             --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
             --header 'content-type: application/json' \
             --data '{
                 "state": "success",
-                "description": "REST commit status",
-                "context": "a test"
+                "description": "Code coverage report published",
+                "context": "coverage"
               }'
 
-      - name: Set code coverage commit status 📫
-        run: node bin/set-gh-status
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Update Code Coverage Badge
+        run: |
+          # Replace this with your command to update the badge if needed
+          echo "Update badge here"
 
-      - name: Check coverage change from README 📫
-        run: node bin/set-gh-status --check-against-readme
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Update code coverage badge 🥇
-        run: node bin/update-badge
-
-      - name: Semantic Release 🚀
+      - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v3
         if: github.ref == 'refs/heads/master'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}  # If your project uses NPM
