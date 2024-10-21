@@ -30,11 +30,6 @@ jobs:
       - name: Build with Maven
         run: mvn clean install
 
-      - name: Run Unit Tests
-        run: mvn test
-        
-      - name: Check Code Coverage
-        run: mvn verify jacoco:report
 
       - name: Publish Code Coverage to GitHub
         run: |
@@ -47,31 +42,27 @@ jobs:
                 "description": "Code coverage report published",
                 "context": "coverage"
               }'
-
+      - name: Ensure JaCoCo Report Directory Exists
+        run: mkdir -p target/site/jacoco
+    
+      - name: JaCoCo Code Coverage Report
+        id: jacoco_reporter
+        uses: PavanMudigonda/jacoco-reporter@v5.0
+        with:
+          coverage_results_path: target/site/jacoco/test.xml  # Adjust this path to where the XML is generated
+          coverage_report_name: Coverage
+          coverage_report_title: JaCoCo
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          skip_check_run: false
+          minimum_coverage: 80
+          fail_below_threshold: false
+          publish_only_summary: false
+  
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v3
         if: github.ref == 'refs/heads/master'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  test:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Check Code Coverage
-      run: mvn verify jacoco:report
-
-    - name: Ensure JaCoCo Report Directory Exists
-      run: mkdir -p target/site/jacoco
-    
-    - name: JaCoCo Code Coverage Report
-      id: jacoco_reporter
-      uses: PavanMudigonda/jacoco-reporter@v5.0
-      with:
-        coverage_results_path: target/site/jacoco/test.xml  # Adjust this path to where the XML is generated
-        coverage_report_name: Coverage
-        coverage_report_title: JaCoCo
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        skip_check_run: false
-        minimum_coverage: 80
-        fail_below_threshold: false
-        publish_only_summary: false
+  
+  
+     
