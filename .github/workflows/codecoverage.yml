@@ -1,0 +1,35 @@
+name: Code Coverage Report Action
+  # You may pin to the exact commit or the version.
+  # uses: insightsengineering/coverage-action@97842088bfccba58670a8caf7b7801f8c9e62bc8
+    uses: insightsengineering/coverage-action@v2.7.0
+  with:
+    # GitHub token to use to publish the check.
+    token: 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  # Consider using GitHub Secrets
+    # Path to the Cobertura coverage XML report.
+    path: coverage.xml  # optional, default is coverage.xml
+    # The minimum allowed coverage percentage, as a real number.
+    threshold: 0  # optional, default is 0
+    # Fail the action when the minimum coverage was not met.
+    fail: true  # optional, default is true
+    # Publish the coverage report as an issue comment.
+    publish: true  # optional
+    # Create a diff of the coverage report.
+    diff: true  # optional
+    # Branch to diff against.
+    diff-branch: main  # optional, default is main
+    # Subdirectory in the diff-storage branch where the XML reports will be stored.
+    storage-subdirectory: .  # optional, default is .
+    # Branch where coverage reports are stored for diff purposes.
+    diff-storage: _xml_coverage_reports  # optional, default is _xml_coverage_reports
+    # Title for the code coverage summary in the Pull Request comment.
+    coverage-summary-title: Code Coverage Summary  # optional, default is Code Coverage Summary
+    # Fail the action if code coverage decreased compared to the `diff-branch`.
+    coverage-reduction-failure: true  # optional
+    # Fail the action if any new uncovered statements are introduced compared to the `diff-branch`.
+    new-uncovered-statements-failure: true  # optional
+    # Fail the action in case of a `Pycobertura` exception.
+    pycobertura-exception-failure: true  # optional, default is true
+    # Make the code coverage report togglable.
+    togglable-report: true  # optional
+    # Whether a detailed coverage report should be excluded from the PR comment.
+    exclude-detailed-coverage: false  # optional
