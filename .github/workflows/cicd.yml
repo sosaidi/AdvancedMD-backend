@@ -48,14 +48,12 @@ jobs:
                 "description": "Code coverage report published",
                 "context": "coverage"
               }'
-
-      - name: Update Code Coverage Badge
-        run: |
-          # Replace this with your command to update the badge if needed
-          echo "Update badge here"
-
+            
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v3
         if: github.ref == 'refs/heads/master'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Code Coverage Report Action
+        uses: insightsengineering/coverage-action@v2.7.1
