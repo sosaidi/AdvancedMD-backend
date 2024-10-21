@@ -29,8 +29,13 @@ jobs:
 
       - name: Build with Maven
         run: mvn clean install
-
-
+      
+      - name: Check Code Coverage
+        run: mvn verify jacoco:report
+      
+      - name: List JaCoCo Report Files
+        run: ls -alh target/site/jacoco/
+        
       - name: Publish Code Coverage to GitHub
         run: |
           curl --request POST \
@@ -49,7 +54,7 @@ jobs:
         id: jacoco_reporter
         uses: PavanMudigonda/jacoco-reporter@v5.0
         with:
-          coverage_results_path: target/site/jacoco/test.xml  # Adjust this path to where the XML is generated
+          coverage_results_path: target/site/jacoco/test.xml
           coverage_report_name: Coverage
           coverage_report_title: JaCoCo
           github_token: ${{ secrets.GITHUB_TOKEN }}
