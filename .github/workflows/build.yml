@@ -6,81 +6,80 @@ on:
   pull_request:
 
 jobs:
-sonar-backend:
-  name: sonar-backend
-  runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-    - name: Set up JDK 17
-      uses: actions/setup-java@v2
-      with:
-        distribution: 'temurin'
-        java-version: '17'
-    - name: Cache SonarCloud packages
-      uses: actions/cache@v1
-      with:
-        path: ~/.sonar/cache
-        key: ${{ runner.os }}-sonar
-        restore-keys: ${{ runner.os }}-sonar
-    - name: Cache Maven packages
-      uses: actions/cache@v1
-      with:
-        path: ~/.m2
-        key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-        restore-keys: ${{ runner.os }}-m2
-    - name: Build and analyze
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=osaidi_AdvancedMD-backend \
+    sonar-backend:
+        name: sonar-backend
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v2
+            with:
+              fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+          - name: Set up JDK 17
+            uses: actions/setup-java@v2
+            with:
+              distribution: 'temurin'
+              java-version: '17'
+          - name: Cache SonarCloud packages
+            uses: actions/cache@v1
+            with:
+              path: ~/.sonar/cache
+              key: ${{ runner.os }}-sonar
+              restore-keys: ${{ runner.os }}-sonar
+          - name: Cache Maven packages
+            uses: actions/cache@v1
+            with:
+              path: ~/.m2
+              key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+              restore-keys: ${{ runner.os }}-m2
+          - name: Build and analyze
+            env:
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+              SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+            run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=osaidi_AdvancedMD-backend \
+
+
+    build:
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v3
+
+
+        - name: Set up JDK
+          uses: actions/setup-java@v2
+          with:
+            java-version: '17'   # Specify the version of Java you are using
+            distribution: 'adopt'
 
 
 
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-
-      - name: Set up JDK
-        uses: actions/setup-java@v2
-        with:
-          java-version: '17'   # Specify the version of Java you are using
-          distribution: 'adopt'
-
-
-
-      - name: Cache Maven dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
-      
-
-      - name: Build with Maven
-        run: mvn clean install
-
-      - name: Run Unit Tests
-        run: mvn test
-
-      - name: Cache Maven dependencies
-        uses: actions/cache@v3
-        with:
+        - name: Cache Maven dependencies
+          uses: actions/cache@v3
+          with:
             path: ~/.m2/repository
             key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
             restore-keys: |
               ${{ runner.os }}-maven-
+        
 
-    
+        - name: Build with Maven
+          run: mvn clean install
 
-      - name: Semantic Release
-        uses: cycjimmy/semantic-release-action@v3
-        if: github.ref == 'refs/heads/master'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        - name: Run Unit Tests
+          run: mvn test
+
+        - name: Cache Maven dependencies
+          uses: actions/cache@v3
+          with:
+              path: ~/.m2/repository
+              key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+              restore-keys: |
+                ${{ runner.os }}-maven-
+  
+      
+
+        - name: Semantic Release
+          uses: cycjimmy/semantic-release-action@v3
+          if: github.ref == 'refs/heads/master'
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
