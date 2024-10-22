@@ -8,6 +8,9 @@ on:
 jobs:
   sonarcloud:
     runs-on: ubuntu-latest
+
+    steps:
+
       - name: SonarCloud Scan
         run: mvn clean verify sonar:sonar
           -Dsonar.projectKey=sosaidi_AdvancedMD-backend \
