@@ -1,4 +1,4 @@
-package com.bezkoder.springjwt.payload.request;
+package com.springjwt.payload.request;
 
 import java.util.Set;
 
