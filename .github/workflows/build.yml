@@ -6,17 +6,6 @@ on:
   pull_request:
 
 jobs:
-  sonarcloud:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          # Disabling shallow clone is recommended for improving relevancy of reporting
-          fetch-depth: 0
-      - name: SonarCloud Scan
-        uses: sonarsource/sonarcloud-github-action@v2.1.0 # Ex: v2.1.0, See the latest version at https://github.com/marketplace/actions/sonarcloud-scan
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
   build:
     runs-on: ubuntu-latest
 
@@ -43,6 +32,21 @@ jobs:
 
       - name: Run Unit Tests
         run: mvn test
+
+      - name: Cache Maven dependencies
+        uses: actions/cache@v3
+        with:
+            path: ~/.m2/repository
+            key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+            restore-keys: |
+              ${{ runner.os }}-maven-
+
+      - name: Build with Maven and Run SonarCloud Analysis
+        run: mvn clean install org.sonarsource.scanner.maven:sonar \
+          -Dsonar.projectKey=sosaidi_AdvancedMD-frontend \
+          -Dsonar.organization=sosaidi \
+          -Dsonar.host.url=https://sonarcloud.io \
+          -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
 
       - name: Semantic Release
