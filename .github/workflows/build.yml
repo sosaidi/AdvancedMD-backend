@@ -58,7 +58,7 @@ jobs:
           sudo apt install -y mysql-client
           mysql --version
           mysql \
-            --host 172.17.0.1 \
+            --host 172.0.0.1 \
             --port ${{ job.services.mysql.ports['3306'] }} \
             -uroot \
             -proot123456 -e "SHOW DATABASES;"
