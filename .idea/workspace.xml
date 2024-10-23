@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="update ci">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
+    <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="updated build ci proccess">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/springjwt/SpringBootSecurityJwtApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/springjwt/SpringBootSecurityJwtApplicationTests.java" afterDir="false" />
     </list>
@@ -67,7 +66,38 @@
       <recent name="$PROJECT_DIR$/src/test" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.SpringBootSecurityJwtApplicationTests">
+    <configuration name="SpringBootSecurityJwtApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-security-jwt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.springjwt.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.springjwt" />
+      <option name="MAIN_CLASS_NAME" value="com.springjwt.SpringBootSecurityJwtApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootSecurityJwtApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-security-jwt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.springjwt.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.springjwt" />
+      <option name="MAIN_CLASS_NAME" value="com.springjwt.SpringBootSecurityJwtApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpringBootSecurityJwtApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -77,6 +107,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.SpringBootSecurityJwtApplicationTests" />
+      <item itemvalue="JUnit.SpringBootSecurityJwtApplicationTests.contextLoads" />
+      <item itemvalue="Spring Boot.SpringBootSecurityJwtApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SpringBootSecurityJwtApplicationTests" />
+        <item itemvalue="JUnit.SpringBootSecurityJwtApplicationTests.contextLoads" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -86,15 +127,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1729619507327</updated>
-      <workItem from="1729619514222" duration="41682000" />
-    </task>
-    <task id="LOCAL-00025" summary="update build action">
-      <option name="closed" value="true" />
-      <created>1729634901539</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1729634901540</updated>
+      <workItem from="1729619514222" duration="41830000" />
     </task>
     <task id="LOCAL-00026" summary="update build action">
       <option name="closed" value="true" />
@@ -480,7 +513,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729703923533</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="updated build ci proccess">
+      <option name="closed" value="true" />
+      <created>1729706600948</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1729706600950</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -514,6 +555,7 @@
     <MESSAGE value="update test" />
     <MESSAGE value="update db" />
     <MESSAGE value="update ci" />
-    <option name="LAST_COMMIT_MESSAGE" value="update ci" />
+    <MESSAGE value="updated build ci proccess" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated build ci proccess" />
   </component>
 </project>
