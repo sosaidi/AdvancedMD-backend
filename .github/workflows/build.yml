@@ -24,7 +24,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Analyze with SonarCloud
-        run: mvn clean sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=sosaidi -Dsonar.projectKey=sosaidi_AdvancedMD-backend -Dsonar.login=1bbe0b2d39c5e66f4b2999aae153e491792710d7 -Dsonar.exclusions=\*\*/\*.java -Dsonar.projectName=sosaidi/AdvancedMD-backend -Dsonar.sources=src/main/java/
+        run: mvn clean sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=sosaidi -Dsonar.projectKey=sosaidi_AdvancedMD-backend -Dsonar.login=${{ secrets.SONAR_TOKEN }} -Dsonar.exclusions=**/*.java -Dsonar.projectName=sosaidi/AdvancedMD-backend -Dsonar.sources=src/main/java/
 
   build:
     runs-on: ubuntu-latest
@@ -37,10 +37,20 @@ jobs:
         ports:
           - 33306:3306
         options: >-
-          --health-cmd="mysqladmin ping"
+          --health-cmd="mysqladmin ping --silent"
           --health-interval=10s
           --health-timeout=5s
           --health-retries=3
+
+      app:
+        image: app:latest
+        ports:
+          - 8091:8091
+        env:
+          SPRING_DATASOURCE_URL: jdbc:mysql://127.0.0.1:33306/advancedMD?autoReconnect=true&useSSL=false
+          depends_on:
+            mysql
+
 
     steps:
       - name: Checkout code
@@ -58,8 +68,8 @@ jobs:
           sudo apt install -y mysql-client
           mysql --version
           mysql \
-            --host 172.17.0.1 \
-            --port ${{ job.services.mysql.ports['3306'] }} \
+            --host 127.0.0.1 \
+            --port 33306 \
             -uroot \
             -proot123456 -e "SHOW DATABASES;"
 
@@ -80,5 +90,6 @@ jobs:
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v3
         if: github.ref == 'refs/heads/master'
+
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
