@@ -26,6 +26,11 @@ jobs:
       - name: Analyze with SonarCloud
         run: mvn clean sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=sosaidi -Dsonar.projectKey=sosaidi_AdvancedMD-backend -Dsonar.login=1bbe0b2d39c5e66f4b2999aae153e491792710d7 -Dsonar.exclusions=\*\*/\*.java -Dsonar.projectName=sosaidi/AdvancedMD-backend -Dsonar.sources=src/main/java/
 
+      - name: SonarCloud Summary Action
+        uses: thecanadianroot/sonarcloud-summary-action@v1
+        with:
+          github-repository: ${{ github.repository }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
   build:
     runs-on: ubuntu-latest
     services:
@@ -73,14 +78,6 @@ jobs:
 
       - name: Run Unit Tests
         run: mvn test
-
-      - name: SonarCloud Summary Action
-        uses: thecanadianroot/sonarcloud-summary-action@v1
-        with:
-          github-repository: ${{ github.repository }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          pull-request: ${{ github.event.pull_request.number }}
-
 
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v3
