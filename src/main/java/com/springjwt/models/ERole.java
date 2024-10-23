@@ -1,4 +1,4 @@
-package com.bezkoder.springjwt.models;
+package com.springjwt.models;
 
 public enum ERole {
   ROLE_PATIENT,
