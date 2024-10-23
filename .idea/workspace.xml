@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="update db">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/springjwt/SpringBootSecurityJwtApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/springjwt/SpringBootSecurityJwtApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/application.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,15 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1729619507327</updated>
-      <workItem from="1729619514222" duration="37263000" />
-    </task>
-    <task id="LOCAL-00016" summary="changed build">
-      <option name="closed" value="true" />
-      <created>1729632787263</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1729632787263</updated>
+      <workItem from="1729619514222" duration="37397000" />
     </task>
     <task id="LOCAL-00017" summary="changed build">
       <option name="closed" value="true" />
@@ -480,7 +471,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729701187635</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="update db">
+      <option name="closed" value="true" />
+      <created>1729701459800</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1729701459800</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
