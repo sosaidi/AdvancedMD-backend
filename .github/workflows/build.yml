@@ -24,13 +24,25 @@ jobs:
           distribution: 'temurin'
 
       - name: Analyze with SonarCloud
-        run: mvn clean sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=sosaidi -Dsonar.projectKey=sosaidi_AdvancedMD-backend -Dsonr.login=1bbe0b2d39c5e66f4b2999aae153e491792710d7 -Dsonar.exclusions=\*\*/\*.java -Dsonar.projectName=sosaidi/AdvancedMD-backend -Dsonar.sources=src/main/java/
+        run: mvn clean sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=sosaidi -Dsonar.projectKey=sosaidi_AdvancedMD-backend -Dsonar.login=1bbe0b2d39c5e66f4b2999aae153e491792710d7 -Dsonar.exclusions=\*\*/\*.java -Dsonar.projectName=sosaidi/AdvancedMD-backend -Dsonar.sources=src/main/java/
 
 
 
   build:
     runs-on: ubuntu-latest
-
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: root123456
+          MYSQL_DATABASE: advancedMD
+        ports:
+          - 3306:3306
+        options: >
+          --health-cmd="mysqladmin ping --silent" 
+          --health-interval=10s 
+          --health-timeout=5s 
+          --health-retries=3
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
