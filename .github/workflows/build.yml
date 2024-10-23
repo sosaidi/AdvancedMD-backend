@@ -42,14 +42,6 @@ jobs:
           --health-timeout=5s
           --health-retries=3
 
-      app:
-        image: app:latest
-        ports:
-          - 8091:8091
-        env:
-          SPRING_DATASOURCE_URL: jdbc:mysql://127.0.0.1:33306/advancedMD?autoReconnect=true&useSSL=false
-          depends_on:
-            mysql
 
 
     steps:
