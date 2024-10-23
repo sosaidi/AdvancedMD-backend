@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="aciton update">
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/springjwt/SpringBootSecurityJwtApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/springjwt/SpringBootSecurityJwtApplicationTests.java" afterDir="false" />
+    <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="update test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1729619507327</updated>
-      <workItem from="1729619514222" duration="25140000" />
+      <workItem from="1729619514222" duration="25533000" />
     </task>
     <task id="LOCAL-00001" summary="Updated dependencies and renamed package import">
       <option name="closed" value="true" />
@@ -406,7 +407,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729679911161</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="update test">
+      <option name="closed" value="true" />
+      <created>1729680236287</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1729680236288</updated>
+    </task>
+    <task id="LOCAL-00042" summary="update test">
+      <option name="closed" value="true" />
+      <created>1729680371643</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1729680371644</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,6 +454,7 @@
     <MESSAGE value="updated build action" />
     <MESSAGE value="pom update" />
     <MESSAGE value="aciton update" />
-    <option name="LAST_COMMIT_MESSAGE" value="aciton update" />
+    <MESSAGE value="update test" />
+    <option name="LAST_COMMIT_MESSAGE" value="update test" />
   </component>
 </project>
