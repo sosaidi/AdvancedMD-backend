@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="update test" />
+    <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="update db">
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1729619507327</updated>
-      <workItem from="1729619514222" duration="26637000" />
+      <workItem from="1729619514222" duration="26825000" />
     </task>
     <task id="LOCAL-00001" summary="Updated dependencies and renamed package import">
       <option name="closed" value="true" />
@@ -436,7 +438,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729680831800</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="update db">
+      <option name="closed" value="true" />
+      <created>1729681866259</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1729681866260</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -468,6 +478,7 @@
     <MESSAGE value="pom update" />
     <MESSAGE value="aciton update" />
     <MESSAGE value="update test" />
-    <option name="LAST_COMMIT_MESSAGE" value="update test" />
+    <MESSAGE value="update db" />
+    <option name="LAST_COMMIT_MESSAGE" value="update db" />
   </component>
 </project>
