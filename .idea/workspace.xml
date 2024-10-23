@@ -85,15 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1729619507327</updated>
-      <workItem from="1729619514222" duration="37522000" />
-    </task>
-    <task id="LOCAL-00018" summary="changed build">
-      <option name="closed" value="true" />
-      <created>1729633345775</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1729633345775</updated>
+      <workItem from="1729619514222" duration="37927000" />
     </task>
     <task id="LOCAL-00019" summary="added target folder">
       <option name="closed" value="true" />
@@ -479,7 +471,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729701602818</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="update db">
+      <option name="closed" value="true" />
+      <created>1729701717033</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1729701717033</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
