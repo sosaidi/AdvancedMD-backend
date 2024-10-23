@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="update db">
       <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,23 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1729619507327</updated>
-      <workItem from="1729619514222" duration="33352000" />
-    </task>
-    <task id="LOCAL-00007" summary="fixed pom.xml and db connection properties">
-      <option name="closed" value="true" />
-      <created>1729626636140</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1729626636141</updated>
-    </task>
-    <task id="LOCAL-00008" summary="fixed pom.xml and db connection properties">
-      <option name="closed" value="true" />
-      <created>1729628202788</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1729628202788</updated>
+      <workItem from="1729619514222" duration="33888000" />
     </task>
     <task id="LOCAL-00009" summary="fixed pom.xml and db connection properties">
       <option name="closed" value="true" />
@@ -478,7 +463,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729692964588</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="update db">
+      <option name="closed" value="true" />
+      <created>1729692996912</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1729692996912</updated>
+    </task>
+    <task id="LOCAL-00057" summary="update db">
+      <option name="closed" value="true" />
+      <created>1729693430594</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1729693430598</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
