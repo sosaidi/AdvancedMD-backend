@@ -30,7 +30,11 @@ jobs:
 
   jacoco:
     runs-on: ubuntu-latest
+
+
     steps:
+
+
       - name: Add coverage to PR
         id: jacoco
         uses: madrapps/jacoco-report@v1.7.1
@@ -41,6 +45,3 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           min-coverage-overall: 10
           min-coverage-changed-files: 40
-
-
-      -
