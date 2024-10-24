@@ -10,7 +10,7 @@
 		<relativePath />
 	</parent>
 	<groupId>com</groupId>
-	<artifactId>spring-boot-security-jwt</artifactId>
+	<artifactId>authentication-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-boot-security-jwt</name>
 	<description>Demo project for Spring Boot Security - JWT</description>
@@ -124,7 +124,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			
+
 		</plugins>
 	</build>
 </project>

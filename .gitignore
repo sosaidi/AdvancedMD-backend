@@ -3,6 +3,7 @@
 
 # Log file
 *.log
+*.gif
 
 # BlueJ files
 *.ctxt
