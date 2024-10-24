@@ -30,11 +30,13 @@ jobs:
             -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
             -Dsonar.exclusions=**/*.java \
             -Dsonar.projectName=sosaidi/AdvancedMD-backend
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
 
 
   build:
     runs-on: ubuntu-latest
-
 
     steps:
       - name: Checkout code
@@ -73,5 +75,4 @@ jobs:
         uses: cycjimmy/semantic-release-action@v3
         if: github.ref == 'refs/heads/master'
         env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
