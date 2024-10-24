@@ -173,15 +173,7 @@
       <option name="presentableId" value="Default" />
       <updated>1729619507327</updated>
       <workItem from="1729619514222" duration="42611000" />
-      <workItem from="1729769762218" duration="7682000" />
-    </task>
-    <task id="LOCAL-00038" summary="aciton update">
-      <option name="closed" value="true" />
-      <created>1729679661052</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1729679661052</updated>
+      <workItem from="1729769762218" duration="8347000" />
     </task>
     <task id="LOCAL-00039" summary="aciton update">
       <option name="closed" value="true" />
@@ -567,7 +559,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729777985535</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729778353875</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1729778353875</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
