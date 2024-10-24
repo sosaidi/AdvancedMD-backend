@@ -5,59 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="added microservice structure">
-      <change afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco-aggregate/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco-aggregate/jacoco-resources/branchfc.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco-aggregate/jacoco-resources/branchnc.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco-aggregate/jacoco-resources/branchpc.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco-aggregate/jacoco-resources/bundle.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco-aggregate/jacoco-resources/class.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco-aggregate/jacoco-resources/down.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco-aggregate/jacoco-resources/greenbar.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco-aggregate/jacoco-resources/group.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco-aggregate/jacoco-resources/method.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco-aggregate/jacoco-resources/package.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco-aggregate/jacoco-resources/prettify.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco-aggregate/jacoco-resources/prettify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco-aggregate/jacoco-resources/redbar.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco-aggregate/jacoco-resources/report.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco-aggregate/jacoco-resources/report.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco-aggregate/jacoco-resources/session.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco-aggregate/jacoco-resources/sort.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco-aggregate/jacoco-resources/sort.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco-aggregate/jacoco-resources/source.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco-aggregate/jacoco-resources/up.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco-aggregate/jacoco-sessions.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco-aggregate/jacoco.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco-aggregate/jacoco.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/SpringBootSecurityJwtApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/SpringBootSecurityJwtApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/controllers/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/controllers/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/controllers/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/models/ERole.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/models/ERole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/models/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/models/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/payload/request/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/payload/request/LoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/payload/request/SignupRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/payload/request/SignupRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/payload/response/JwtResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/payload/response/JwtResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/payload/response/MessageResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/payload/response/MessageResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/repository/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/security/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/security/jwt/AuthEntryPointJwt.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/security/jwt/AuthEntryPointJwt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/security/jwt/AuthTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/security/jwt/AuthTokenFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/security/jwt/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/security/jwt/JwtUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/security/services/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/security/services/UserDetailsImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/security/services/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/security/services/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/test/java/com/springjwt/SpringBootSecurityJwtApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/test/java/com/springjwt/SpringBootSecurityJwtApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/test/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/test/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/test/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/test/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,15 +174,7 @@
       <option name="presentableId" value="Default" />
       <updated>1729619507327</updated>
       <workItem from="1729619514222" duration="42611000" />
-      <workItem from="1729769762218" duration="5053000" />
-    </task>
-    <task id="LOCAL-00034" summary="aciton update">
-      <option name="closed" value="true" />
-      <created>1729637371806</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1729637371806</updated>
+      <workItem from="1729769762218" duration="7154000" />
     </task>
     <task id="LOCAL-00035" summary="aciton update">
       <option name="closed" value="true" />
@@ -618,7 +560,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729773147002</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="added microservice structure">
+      <option name="closed" value="true" />
+      <created>1729775762399</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1729775762401</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

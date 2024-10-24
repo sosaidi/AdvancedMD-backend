@@ -24,25 +24,18 @@ jobs:
           distribution: 'temurin'
 
       - name: Analyze with SonarCloud
-        run: mvn sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=sosaidi -Dsonar.projectKey=sosaidi_AdvancedMD-backend -Dsonar.login=1bbe0b2d39c5e66f4b2999aae153e491792710d7 -Dsonar.exclusions=\*\*/\*.java -Dsonar.projectName=sosaidi/AdvancedMD-backend
-
+        run: mvn sonar:sonar -Dsonar.host.url=https://sonarcloud.io \
+            -Dsonar.organization=sosaidi \
+            -Dsonar.projectKey=sosaidi_AdvancedMD-backend \
+            -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
+            -Dsonar.exclusions=**/*.java \
+            -Dsonar.projectName=sosaidi/AdvancedMD-backend
 
 
   build:
     runs-on: ubuntu-latest
-    services:
-      mysql:
-        image: mysql:latest
-        env:
-          MYSQL_DATABASE: advancedMD
-          MYSQL_ROOT_PASSWORD: root123456
-        ports:
-          - 33306:3306
-        options: >-
-          --health-cmd="mysqladmin ping"
-          --health-interval=10s
-          --health-timeout=5s
-          --health-retries=3
+
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -53,16 +46,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Verify MySQL connection
-        run: |
-          sudo apt update
-          sudo apt install -y mysql-client
-          mysql --version
-          mysql \
-            --host 172.17.0.1 \
-            --port ${{ job.services.mysql.ports['3306'] }} \
-            -uroot \
-            -proot123456 -e "SHOW DATABASES;"
+      -
       - name: Cache Maven dependencies
         uses: actions/cache@v3
         with:
@@ -70,8 +54,9 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-maven-
+
       - name: Build with Maven
-        run: mvn clean verify install
+        uses: spring-guides/getting-started-macros/.github/workflows/build_initial_complete_maven_gradle.yml@main
 
       - name: Add coverage to PR
         id: jacoco
@@ -84,11 +69,10 @@ jobs:
           min-coverage-overall: 10
           min-coverage-changed-files: 40
 
-      - name: Run Unit Tests
-        run: mvn test
 
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v3
         if: github.ref == 'refs/heads/master'
         env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
