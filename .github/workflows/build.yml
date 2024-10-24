@@ -31,7 +31,7 @@ jobs:
         with:
               github-repository: ${{ github.repository }}
               github-token: ${{ secrets.GITHUB_TOKEN }}
-              pull-request: ${{ github.event.pull_request.number }}
+
 
 
 

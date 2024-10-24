@@ -6,21 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="update ci">
       <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/test/java/com/springjwt/SpringBootSecurityJwtApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/test/java/com/springjwt/SpringBootSecurityJwtApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/test/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/test/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/target/test-classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/test-classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco-aggregate/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco-aggregate/jacoco-resources/prettify.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco-aggregate/jacoco-resources/prettify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco-aggregate/jacoco-resources/report.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco-aggregate/jacoco-resources/sort.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco-aggregate/jacoco-sessions.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco-aggregate/jacoco.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco-aggregate/jacoco.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,15 +174,7 @@
       <updated>1729619507327</updated>
       <workItem from="1729619514222" duration="42611000" />
       <workItem from="1729769762218" duration="13506000" />
-      <workItem from="1729792138989" duration="128000" />
-    </task>
-    <task id="LOCAL-00055" summary="update db">
-      <option name="closed" value="true" />
-      <created>1729692964588</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1729692964588</updated>
+      <workItem from="1729792138989" duration="242000" />
     </task>
     <task id="LOCAL-00056" summary="update db">
       <option name="closed" value="true" />
@@ -583,7 +560,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729784399759</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729792278639</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1729792278640</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
