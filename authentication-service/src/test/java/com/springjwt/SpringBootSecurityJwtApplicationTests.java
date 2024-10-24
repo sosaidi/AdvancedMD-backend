@@ -15,16 +15,6 @@ public class SpringBootSecurityJwtApplicationTests {
     public void contextLoads() {
 
     }
-    @Test
-    public void incorrectWeight() {
-        ShippingService shippingService = new ShippingService();
-        assertThrows(IllegalStateException.class, () -> shippingService.calculateShippingFee(-1));
-    }
 
-    @Test
-    public void firstRangeWeight() {
-        ShippingService shippingService = new ShippingService();
-        assertEquals(5, shippingService.calculateShippingFee(1));
-    }
 
 }
