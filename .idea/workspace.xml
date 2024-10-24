@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="update ci">
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/ShippingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/test/java/com/springjwt/SpringBootSecurityJwtApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/test/java/com/springjwt/SpringBootSecurityJwtApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,15 +175,7 @@
       <updated>1729619507327</updated>
       <workItem from="1729619514222" duration="42611000" />
       <workItem from="1729769762218" duration="13506000" />
-      <workItem from="1729792138989" duration="1930000" />
-    </task>
-    <task id="LOCAL-00057" summary="update db">
-      <option name="closed" value="true" />
-      <created>1729693430594</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1729693430598</updated>
+      <workItem from="1729792138989" duration="2148000" />
     </task>
     <task id="LOCAL-00058" summary="update db">
       <option name="closed" value="true" />
@@ -573,7 +561,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729792387826</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729794285195</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1729794285196</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
