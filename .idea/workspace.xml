@@ -7,6 +7,7 @@
     <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="update ci">
       <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,23 +174,7 @@
       <option name="presentableId" value="Default" />
       <updated>1729619507327</updated>
       <workItem from="1729619514222" duration="42611000" />
-      <workItem from="1729769762218" duration="9835000" />
-    </task>
-    <task id="LOCAL-00048" summary="update db">
-      <option name="closed" value="true" />
-      <created>1729685490817</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1729685490817</updated>
-    </task>
-    <task id="LOCAL-00049" summary="update db">
-      <option name="closed" value="true" />
-      <created>1729687530285</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1729687530286</updated>
+      <workItem from="1729769762218" duration="10890000" />
     </task>
     <task id="LOCAL-00050" summary="update db">
       <option name="closed" value="true" />
@@ -567,7 +552,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729780493308</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729780510888</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1729780510888</updated>
+    </task>
+    <task id="LOCAL-00098" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729780539362</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1729780539362</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
