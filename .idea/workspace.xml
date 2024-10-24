@@ -4,44 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="delted build ci only sonar ci needed">
-      <change afterPath="$PROJECT_DIR$/AuthenticationService/src/test/resources/application.properties" afterDir="false" />
+    <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="test ci">
       <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authservice/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authservice/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authservice/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authservice/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authservice/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authservice/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/advancedmd/authservice/AuthserviceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/advancedmd/authservice/controller/AuthServiceController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/advancedmd/authservice/entity/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/advancedmd/authservice/repository/AuthServiceRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/advancedmd/authservice/service/AuthServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authservice/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authservice/src/test/java/com/advancedmd/authservice/AuthserviceApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springjwt/SpringBootSecurityJwtApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/SpringBootSecurityJwtApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springjwt/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/controllers/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springjwt/controllers/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/controllers/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springjwt/models/ERole.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/models/ERole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springjwt/models/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/models/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springjwt/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springjwt/payload/request/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/payload/request/LoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springjwt/payload/request/SignupRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/payload/request/SignupRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springjwt/payload/response/JwtResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/payload/response/JwtResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springjwt/payload/response/MessageResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/payload/response/MessageResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springjwt/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/repository/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springjwt/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springjwt/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/security/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springjwt/security/jwt/AuthEntryPointJwt.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/security/jwt/AuthEntryPointJwt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springjwt/security/jwt/AuthTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/security/jwt/AuthTokenFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springjwt/security/jwt/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/security/jwt/JwtUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springjwt/security/services/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/security/services/UserDetailsImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springjwt/security/services/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/springjwt/security/services/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/springjwt/SpringBootSecurityJwtApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/test/java/com/springjwt/SpringBootSecurityJwtApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,23 +172,7 @@
       <option name="presentableId" value="Default" />
       <updated>1729619507327</updated>
       <workItem from="1729619514222" duration="42611000" />
-      <workItem from="1729769762218" duration="1836000" />
-    </task>
-    <task id="LOCAL-00029" summary="pom update">
-      <option name="closed" value="true" />
-      <created>1729636131576</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1729636131576</updated>
-    </task>
-    <task id="LOCAL-00030" summary="aciton update">
-      <option name="closed" value="true" />
-      <created>1729636855578</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1729636855579</updated>
+      <workItem from="1729769762218" duration="2065000" />
     </task>
     <task id="LOCAL-00031" summary="aciton update">
       <option name="closed" value="true" />
@@ -601,7 +550,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729770064971</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="test ci">
+      <option name="closed" value="true" />
+      <created>1729771671739</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1729771671739</updated>
+    </task>
+    <task id="LOCAL-00079" summary="test ci">
+      <option name="closed" value="true" />
+      <created>1729771743916</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1729771743918</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -637,6 +602,7 @@
     <MESSAGE value="update ci" />
     <MESSAGE value="updated build ci proccess" />
     <MESSAGE value="delted build ci only sonar ci needed" />
-    <option name="LAST_COMMIT_MESSAGE" value="delted build ci only sonar ci needed" />
+    <MESSAGE value="test ci" />
+    <option name="LAST_COMMIT_MESSAGE" value="test ci" />
   </component>
 </project>
