@@ -5,13 +5,13 @@ import java.util.List;
 public class JwtResponse {
   private String token;
   private String type = "Bearer";
-  private Long id;
+  private int user_id;
   private String username;
   private List<String> roles;
 
-  public JwtResponse(String accessToken, Long id, String username, List<String> roles) {
+  public JwtResponse(String accessToken, int user_id, String username, List<String> roles) {
     this.token = accessToken;
-    this.id = id;
+    this.user_id = user_id;
     this.username = username;
     this.roles = roles;
   }
@@ -32,12 +32,12 @@ public class JwtResponse {
     this.type = tokenType;
   }
 
-  public Long getId() {
-    return id;
+  public int getId() {
+    return user_id;
   }
 
-  public void setId(Long id) {
-    this.id = id;
+  public void setId(int user_id) {
+    this.user_id = user_id;
   }
 
 
