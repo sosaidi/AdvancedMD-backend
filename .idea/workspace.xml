@@ -4,10 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="update ci">
+    <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="adapted models and controllers to database schmea">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/test/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/controllers/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/controllers/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/models/ERole.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/models/ERole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/payload/request/SignupRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/payload/request/SignupRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/payload/response/JwtResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/payload/response/JwtResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/security/services/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/security/services/UserDetailsImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/test-classes/application.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="20-setup-cicd" />
+        <entry key="$PROJECT_DIR$" value="feature/3-jwt-authentication" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,7 +50,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feature/20-setup-cicd",
+    "git-widget-placeholder": "feature/2-role-based-access-control",
     "last_opened_file_path": "/Users/annclermont/Desktop/AdvancedMD-backend",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -176,15 +184,10 @@
       <updated>1729619507327</updated>
       <workItem from="1729619514222" duration="42611000" />
       <workItem from="1729769762218" duration="13506000" />
-      <workItem from="1729792138989" duration="3401000" />
-    </task>
-    <task id="LOCAL-00060" summary="update db">
-      <option name="closed" value="true" />
-      <created>1729695293150</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1729695293154</updated>
+      <workItem from="1729792138989" duration="4453000" />
+      <workItem from="1730193247676" duration="615000" />
+      <workItem from="1733411002706" duration="711000" />
+      <workItem from="1733678807859" duration="4435000" />
     </task>
     <task id="LOCAL-00061" summary="update db">
       <option name="closed" value="true" />
@@ -570,7 +573,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729794357885</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="updated README.md">
+      <option name="closed" value="true" />
+      <created>1729795617364</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1729795617365</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -608,6 +619,8 @@
     <MESSAGE value="test ci" />
     <MESSAGE value="added microservice structure" />
     <MESSAGE value="update ci" />
-    <option name="LAST_COMMIT_MESSAGE" value="update ci" />
+    <MESSAGE value="updated README.md" />
+    <MESSAGE value="adapted models and controllers to database schmea" />
+    <option name="LAST_COMMIT_MESSAGE" value="adapted models and controllers to database schmea" />
   </component>
 </project>
