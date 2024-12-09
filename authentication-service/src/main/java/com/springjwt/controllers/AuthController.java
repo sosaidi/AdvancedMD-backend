@@ -119,4 +119,11 @@ public class AuthController {
 
     return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
   }
+  @PostMapping("/signout")
+  public ResponseEntity<?> logoutUser() {
+    // Clear authentication from the sec
+    // urity context
+    SecurityContextHolder.clearContext();
+    return ResponseEntity.ok(new MessageResponse("User logged out successfully"));
+  }
 }

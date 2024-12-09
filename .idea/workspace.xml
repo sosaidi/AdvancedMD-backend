@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="added webConfig for cross origins to avoid these error">
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/config/SecurityConfig.java" afterDir="false" />
+    <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="modified AuthController to avoid cross origin error">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/config/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/controllers/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/controllers/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/controllers/TestController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +43,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "feature/2-role-based-access-control",
-    "last_opened_file_path": "/Users/annclermont/Desktop/AdvancedMD-backend",
+    "last_opened_file_path": "/Users/annclermont/Desktop/AdvancedMD-backend/authentication-service/src/main/java/com/springjwt/payload/request",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -65,6 +64,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/payload/request" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/AuthenticationService" />
       <recent name="$PROJECT_DIR$/AuthenticationService/src/test" />
@@ -180,15 +180,7 @@
       <workItem from="1729792138989" duration="4453000" />
       <workItem from="1730193247676" duration="615000" />
       <workItem from="1733411002706" duration="711000" />
-      <workItem from="1733678807859" duration="15303000" />
-    </task>
-    <task id="LOCAL-00064" summary="update db">
-      <option name="closed" value="true" />
-      <created>1729701187633</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1729701187635</updated>
+      <workItem from="1733678807859" duration="18328000" />
     </task>
     <task id="LOCAL-00065" summary="update db">
       <option name="closed" value="true" />
@@ -574,7 +566,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733736503628</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="modified AuthController to avoid cross origin error">
+      <option name="closed" value="true" />
+      <created>1733738537216</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1733738537217</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -616,6 +616,7 @@
     <MESSAGE value="adapted models and controllers to database schmea" />
     <MESSAGE value="adapted models and controllers and fixes it accroding to database schema. Now User signUp/signIn is working!" />
     <MESSAGE value="added webConfig for cross origins to avoid these error" />
-    <option name="LAST_COMMIT_MESSAGE" value="added webConfig for cross origins to avoid these error" />
+    <MESSAGE value="modified AuthController to avoid cross origin error" />
+    <option name="LAST_COMMIT_MESSAGE" value="modified AuthController to avoid cross origin error" />
   </component>
 </project>
