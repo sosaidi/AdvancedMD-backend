@@ -10,15 +10,12 @@ public class SignupRequest {
   private String username;
 
   @NotBlank
-  @Size(max = 50)
-  @Email
-  private String email;
+  @Size(min = 0, max = 50)
+  private String password;
 
   private Set<String> role;
 
-  @NotBlank
-  @Size(min = 6, max = 40)
-  private String password;
+
 
   public String getUsername() {
     return username;
@@ -28,13 +25,6 @@ public class SignupRequest {
     this.username = username;
   }
 
-  public String getEmail() {
-    return email;
-  }
-
-  public void setEmail(String email) {
-    this.email = email;
-  }
 
   public String getPassword() {
     return password;
