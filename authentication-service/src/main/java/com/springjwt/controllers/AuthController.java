@@ -32,8 +32,9 @@ import com.springjwt.repository.UserRepository;
 import com.springjwt.security.jwt.JwtUtils;
 import com.springjwt.security.services.UserDetailsImpl;
 
-@CrossOrigin(origins = "*", maxAge = 3600)
+
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/api/auth")
 public class AuthController {
   @Autowired

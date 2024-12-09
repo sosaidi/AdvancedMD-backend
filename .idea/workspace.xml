@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="adapted models and controllers to database schmea">
+    <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="added webConfig for cross origins to avoid these error">
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/config/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/controllers/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/payload/request/SignupRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/payload/request/SignupRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/payload/response/JwtResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/payload/response/JwtResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/security/services/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/security/services/UserDetailsImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +53,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "copyright",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -182,23 +180,7 @@
       <workItem from="1729792138989" duration="4453000" />
       <workItem from="1730193247676" duration="615000" />
       <workItem from="1733411002706" duration="711000" />
-      <workItem from="1733678807859" duration="10701000" />
-    </task>
-    <task id="LOCAL-00062" summary="update db">
-      <option name="closed" value="true" />
-      <created>1729696458709</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1729696458710</updated>
-    </task>
-    <task id="LOCAL-00063" summary="update db">
-      <option name="closed" value="true" />
-      <created>1729696507986</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1729696507987</updated>
+      <workItem from="1733678807859" duration="15303000" />
     </task>
     <task id="LOCAL-00064" summary="update db">
       <option name="closed" value="true" />
@@ -576,7 +558,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733684678148</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="adapted models and controllers and fixes it accroding to database schema. Now User signUp/signIn is working!">
+      <option name="closed" value="true" />
+      <created>1733692721023</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1733692721029</updated>
+    </task>
+    <task id="LOCAL-00112" summary="added webConfig for cross origins to avoid these error">
+      <option name="closed" value="true" />
+      <created>1733736503625</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1733736503628</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -616,17 +614,8 @@
     <MESSAGE value="update ci" />
     <MESSAGE value="updated README.md" />
     <MESSAGE value="adapted models and controllers to database schmea" />
-    <option name="LAST_COMMIT_MESSAGE" value="adapted models and controllers to database schmea" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/controllers/AuthController.java</url>
-          <line>75</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="adapted models and controllers and fixes it accroding to database schema. Now User signUp/signIn is working!" />
+    <MESSAGE value="added webConfig for cross origins to avoid these error" />
+    <option name="LAST_COMMIT_MESSAGE" value="added webConfig for cross origins to avoid these error" />
   </component>
 </project>
