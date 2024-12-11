@@ -17,6 +17,7 @@
 	<description>Advanced MD Spring Boot Security - JWT</description>
 	<modules>
 		<module>authentication-service</module>
+		<module>ViewMedicalRecord</module>
 	</modules>
 
 	<properties>
