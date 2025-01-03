@@ -15,8 +15,8 @@ public class Appointment {
   @Column(name = "patient_id", nullable = false)
   private Long patientId;
 
-  @Column(name = "staff_id", nullable = false)
-  private Long staffId;
+  @Column(name = "doctor_id", nullable = false)
+  private Long doctorId;
 
   @Column(name = "room_id")
   private Long roomId;
@@ -30,9 +30,9 @@ public class Appointment {
   // Constructors
   public Appointment() {}
 
-  public Appointment(Long patientId, Long staffId, Long roomId, LocalDateTime appDate, String status) {
+  public Appointment(Long patientId, Long doctorId, Long roomId, LocalDateTime appDate, String status) {
     this.patientId = patientId;
-    this.staffId = staffId;
+    this.doctorId = doctorId;
     this.roomId = roomId;
     this.appDate = appDate;
     this.status = status;
@@ -55,12 +55,12 @@ public class Appointment {
     this.patientId = patientId;
   }
 
-  public Long getStaffId() {
-    return staffId;
+  public Long getDoctorId() {
+    return doctorId;
   }
 
-  public void setStaffId(Long staffId) {
-    this.staffId = staffId;
+  public void setDoctorId(Long doctorId) {
+    this.doctorId = doctorId;
   }
 
   public Long getRoomId() {

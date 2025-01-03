@@ -5,15 +5,16 @@ import java.util.Optional;
 
 import com.springjwt.models.Appointment;
 import com.springjwt.repository.AppointmentRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("/api/appointment")
-
+@RequestMapping("/api/doctor/appointment")
+@PreAuthorize("hasRole('DOCTOR')")
 public class AppointmentController {
 
   @Autowired
@@ -43,7 +44,7 @@ public class AppointmentController {
   public ResponseEntity<Appointment> updateAppointment(@PathVariable Long id, @RequestBody Appointment updatedAppointment) {
     return appointmentRepository.findById(id).map(appointment -> {
       appointment.setPatientId(updatedAppointment.getPatientId());
-      appointment.setStaffId(updatedAppointment.getStaffId());
+      appointment.setDoctorId(updatedAppointment.getDoctorId());
       appointment.setRoomId(updatedAppointment.getRoomId());
       appointment.setAppDate(updatedAppointment.getAppDate());
       appointment.setStatus(updatedAppointment.getStatus());
@@ -53,7 +54,7 @@ public class AppointmentController {
 
   // Delete appointment
   @DeleteMapping("/{id}")
-  public ResponseEntity<Void> deleteAppointment(@PathVariable Long id) {
+  public ResponseEntity<?> deleteAppointment(@PathVariable Long id) {
     if (appointmentRepository.existsById(id)) {
       appointmentRepository.deleteById(id);
       return ResponseEntity.noContent().build();
