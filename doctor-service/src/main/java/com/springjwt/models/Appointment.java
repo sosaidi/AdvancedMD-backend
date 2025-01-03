@@ -1,6 +1,5 @@
 package com.springjwt.models;
 
-package com.example.appointmentsystem.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;

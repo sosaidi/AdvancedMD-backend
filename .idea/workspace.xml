@@ -4,46 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="modified AuthController and added signout">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/springjwt/SpringBootSecurityJwtApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/springjwt/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/springjwt/config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/springjwt/controllers/AppointmentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/springjwt/controllers/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/springjwt/models/Appointment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/springjwt/repository/AppointmentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor-service/src/test/java/com/springjwt/SpringBootSecurityJwtApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor-service/target/authentication-service-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor-service/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor-service/target/failsafe-reports/failsafe-summary.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor-service/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco-aggregate/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco-aggregate/jacoco-resources/prettify.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco-aggregate/jacoco-resources/prettify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco-aggregate/jacoco-resources/report.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco-aggregate/jacoco-resources/sort.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco-aggregate/jacoco-sessions.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco-aggregate/jacoco.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco-aggregate/jacoco.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor-service/target/surefire-reports/TEST-com.springjwt.SpringBootSecurityJwtApplicationTests.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctor-service/target/surefire-reports/com.springjwt.SpringBootSecurityJwtApplicationTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="implemented doctor microservice with first controller and model Appointment.java">
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/springjwt/models/ERole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/springjwt/models/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/springjwt/models/ToDos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/springjwt/models/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/src/main/java/com/springjwt/models/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/springjwt/models/Appointment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -75,7 +54,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "feature/2-role-based-access-control",
-    "last_opened_file_path": "/Users/annclermont/Desktop/AdvancedMD-backend/doctor-service",
+    "last_opened_file_path": "/Users/annclermont/Desktop/AdvancedMD-backend/doctor-service/src/main/java/com/springjwt/models",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -96,11 +75,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/doctor-service/src/main/java/com/springjwt/models" />
       <recent name="$PROJECT_DIR$/doctor-service" />
       <recent name="$PROJECT_DIR$/authentication-service/src/main/java/com/springjwt/payload/request" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/AuthenticationService" />
-      <recent name="$PROJECT_DIR$/AuthenticationService/src/test" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/AuthenticationService" />
@@ -215,15 +194,7 @@
       <workItem from="1733678807859" duration="19099000" />
       <workItem from="1733814570066" duration="655000" />
       <workItem from="1733996469839" duration="3763000" />
-      <workItem from="1735499505819" duration="2799000" />
-    </task>
-    <task id="LOCAL-00066" summary="update db">
-      <option name="closed" value="true" />
-      <created>1729701602816</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1729701602818</updated>
+      <workItem from="1735499505819" duration="3978000" />
     </task>
     <task id="LOCAL-00067" summary="update db">
       <option name="closed" value="true" />
@@ -609,7 +580,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733745602723</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="implemented doctor microservice with first controller and model Appointment.java">
+      <option name="closed" value="true" />
+      <created>1735900296955</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1735900296956</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -627,7 +606,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added build check for ci action" />
     <MESSAGE value="updated build check for ci action" />
     <MESSAGE value="fixed pom.xml and db connection properties" />
     <MESSAGE value="fixed bug" />
@@ -652,6 +630,7 @@
     <MESSAGE value="added webConfig for cross origins to avoid these error" />
     <MESSAGE value="modified AuthController to avoid cross origin error" />
     <MESSAGE value="modified AuthController and added signout" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified AuthController and added signout" />
+    <MESSAGE value="implemented doctor microservice with first controller and model Appointment.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented doctor microservice with first controller and model Appointment.java" />
   </component>
 </project>
