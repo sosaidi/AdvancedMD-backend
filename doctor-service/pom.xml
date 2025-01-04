@@ -9,7 +9,7 @@
 		<version>3.1.0</version>
 		<relativePath />
 	</parent>
-	<groupId>com</groupId>
+	<groupId>com.doc</groupId>
 	<artifactId>doctor-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>doctor-service</name>

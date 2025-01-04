@@ -10,7 +10,7 @@
 		<relativePath />
 	</parent>
 	<groupId>com</groupId>
-	<artifactId>spring-boot-security-jwt</artifactId>
+	<artifactId>advancedMD</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-boot-security-jwt</name>
 	<packaging>pom</packaging>
