@@ -35,9 +35,9 @@ public class JwtUtils {
         .signWith(key(), SignatureAlgorithm.HS256)
         .compact();
   }
-  
+
   private Key key() {
-    return Keys.hmacShaKeyFor(Decoders.BASE64.decode(jwtSecret));
+    return Keys.hmacShaKeyFor(Decoders.BASE64.decode("======================BezKoder=Spring==========================="));
   }
 
   public String getUserNameFromJwtToken(String token) {

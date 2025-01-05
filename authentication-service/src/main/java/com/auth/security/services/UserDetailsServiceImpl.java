@@ -13,7 +13,7 @@ import com.auth.repository.UserRepository;
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
   @Autowired
-  UserRepository userRepository;
+  public UserRepository userRepository;
 
   @Override
   @Transactional

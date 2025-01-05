@@ -35,14 +35,16 @@ public class AppointmentController {
 
   // Create new appointment
   @PostMapping
-  public Appointment createAppointment(@RequestBody Appointment appointment) {
-    return appointmentRepository.save(appointment);
+  public  ResponseEntity<Appointment> createAppointment(@RequestBody Appointment appointment) {
+
+    return ResponseEntity.ok(appointmentRepository.save(appointment));
+
   }
 
   // Update appointment
   @PutMapping("/{id}")
   public ResponseEntity<Appointment> updateAppointment(@PathVariable Long id, @RequestBody Appointment updatedAppointment) {
-    return appointmentRepository.findById(id).map(appointment -> {
+    return appointmentRepository.findByAppId(id).map(appointment -> {
       appointment.setPatientId(updatedAppointment.getPatientId());
       appointment.setDoctorId(updatedAppointment.getDoctorId());
       appointment.setRoomId(updatedAppointment.getRoomId());
