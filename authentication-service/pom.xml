@@ -9,12 +9,12 @@
 		<version>3.1.0</version>
 		<relativePath />
 	</parent>
-	<groupId>com</groupId>
+	<groupId>com.auth</groupId>
 	<artifactId>authentication-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>authentication-service</name>
-	<description>authentication-service for Spring Boot Security - JWT</description>
-
+	<description>authentication-service</description>
+	<packaging>jar</packaging>
 	<properties>
 		<java.version> 17</java.version>
 		<maven.compiler.source>17</maven.compiler.source>
@@ -80,6 +80,18 @@
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.doc</groupId>
+			<artifactId>doctor-service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>test</scope>
+		</dependency>
+
 
 	</dependencies>
 
@@ -110,11 +122,16 @@
 				</executions>
 
 			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.0.0-M5</version>
+				<configuration>
+					<useModulePath>false</useModulePath> <!-- Disable module path support for JUnit 5 -->
+				</configuration>
 			</plugin>
+
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
