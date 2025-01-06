@@ -1,6 +1,5 @@
 package com.doc.repository;
 
-
 import com.doc.models.Appointment;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -10,7 +9,6 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-
 public interface AppointmentRepository extends JpaRepository<Appointment, Long> {
 
   // Find appointments by patient ID
@@ -18,9 +16,11 @@ public interface AppointmentRepository extends JpaRepository<Appointment, Long> 
 
   // Find appointments by doctor ID
   List<Appointment> findByDoctorId(Long doctorId);
+
   Optional<Appointment> findByAppId(Long appId);
 
-  Optional<Appointment> deleteByAppId(Long appId);
+  // Change return type to void
+  Boolean deleteByAppId(Long appId);
 
   // Find appointments within a date range
   List<Appointment> findByAppDateBetween(LocalDateTime startDate, LocalDateTime endDate);

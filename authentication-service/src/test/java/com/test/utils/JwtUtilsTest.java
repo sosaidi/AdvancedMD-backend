@@ -42,7 +42,7 @@ public class JwtUtilsTest {
 
     @Test
     void testValidateJwtToken() {
-        String mockToken = "mockJwtToken";
+        String mockToken = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb2MxNSIsImlhdCI6MTczNjAyNTg1MSwiZXhwIjoxNzM2MTEyMjUxfQ.OBQryPT5geuq-uFUXuYolxJ0fvxoFR5p_gFlkd_yPQY";
 
         boolean isValid = jwtUtils.validateJwtToken(mockToken);
 
