@@ -295,15 +295,7 @@
       <workItem from="1736095620486" duration="6086000" />
       <workItem from="1736102739382" duration="19034000" />
       <workItem from="1736771462495" duration="3038000" />
-      <workItem from="1737400498166" duration="6080000" />
-    </task>
-    <task id="LOCAL-00079" summary="test ci">
-      <option name="closed" value="true" />
-      <created>1729771743916</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1729771743918</updated>
+      <workItem from="1737400498166" duration="6483000" />
     </task>
     <task id="LOCAL-00080" summary="test ci">
       <option name="closed" value="true" />
@@ -689,7 +681,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737406377115</updated>
     </task>
-    <option name="localTasksCounter" value="128" />
+    <task id="LOCAL-00128" summary="modified jacoco in yaml to get badges">
+      <option name="closed" value="true" />
+      <created>1737406605711</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1737406605711</updated>
+    </task>
+    <option name="localTasksCounter" value="129" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
