@@ -5,8 +5,8 @@ doctor-service,com.doc.controllers,AppointmentController,25,61,1,1,4,13,5,5,4,5
 doctor-service,com.doc.security,WebSecurityConfig,93,0,0,0,18,0,10,0,10,0
 doctor-service,com.doc.models,ToDos,60,0,0,0,25,0,14,0,14,0
 doctor-service,com.doc.models,Appointment,18,45,0,0,7,19,1,13,1,13
-doctor-service,com.doc.models,Role,23,0,0,0,11,0,6,0,6,0
 doctor-service,com.doc.models,ERole,21,0,0,0,4,0,1,0,1,0
+doctor-service,com.doc.models,Role,23,0,0,0,11,0,6,0,6,0
 doctor-service,com.doc.models,User,8,42,0,0,4,15,2,8,2,8
 doctor-service,com.doc.security.services,UserDetailsImpl,49,38,6,0,13,14,12,3,9,3
 doctor-service,com.doc.security.services,UserDetailsServiceImpl,0,21,0,0,0,4,0,3,0,3

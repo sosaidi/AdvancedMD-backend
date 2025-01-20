@@ -7,8 +7,8 @@ com/doc/security/services/UserDetailsImpl.class
 com/doc/security/jwt/JwtUtils.class
 com/doc/models/Appointment.class
 com/doc/controllers/AppointmentController.class
-com/doc/repository/AppointmentRepository.class
 com/doc/models/User.class
+com/doc/repository/AppointmentRepository.class
 com/doc/payload/response/MessageResponse.class
 com/doc/security/jwt/AuthTokenFilter.class
 SecurityConfig.class
@@ -16,5 +16,5 @@ com/doc/security/WebSecurityConfig.class
 com/doc/models/ToDos.class
 com/doc/payload/response/JwtResponse.class
 com/doc/models/ERole.class
-com/doc/security/jwt/AuthEntryPointJwt.class
 com/doc/security/services/UserDetailsServiceImpl.class
+com/doc/security/jwt/AuthEntryPointJwt.class
