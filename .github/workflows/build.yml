@@ -32,15 +32,16 @@ jobs:
 
 
     steps:
-            # Publish Coverage Job Summary  # Optional
-      - name: Add Jacocoo report to workflow run summary
+      - name: Parse JaCoCo XML
+        id: jacoco_reporter
         run: |
-                echo "| Outcome | Value |" >> $GITHUB_STEP_SUMMARY
-                echo "| --- | --- |" >> $GITHUB_STEP_SUMMARY
-                echo "| Code Coverage % | ${{ steps.jacoco_reporter.outputs.coverage_percentage }} |" >> $GITHUB_STEP_SUMMARY
-                echo "| :heavy_check_mark: Number of Lines Covered | ${{ steps.jacoco_reporter.outputs.covered_lines }} |" >> $GITHUB_STEP_SUMMARY
-                echo "| :x: Number of Lines Missed | ${{ steps.jacoco_reporter.outputs.missed_lines }} |" >> $GITHUB_STEP_SUMMARY
-                echo "| Total Number of Lines | ${{ steps.jacoco_reporter.outputs.total_lines }} |" >> $GITHUB_STEP_SUMMARY
-            
-      
+          COVERAGE=$(xmllint --xpath "string(//report/counter[@type='INSTRUCTION']/@covered)" doctor-service/target/site/jacoco/jacoco.xml)
+          MISSED=$(xmllint --xpath "string(//report/counter[@type='INSTRUCTION']/@missed)" doctor-service/target/site/jacoco/jacoco.xml)
+          TOTAL=$((COVERAGE + MISSED))
+          PERCENT=$((COVERAGE * 100 / TOTAL))
+          echo "::set-output name=coverage_percentage::$PERCENT"
+          echo "::set-output name=covered_lines::$COVERAGE"
+          echo "::set-output name=missed_lines::$MISSED"
+          echo "::set-output name=total_lines::$TOTAL"
+
      

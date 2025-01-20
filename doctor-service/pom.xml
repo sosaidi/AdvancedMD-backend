@@ -131,6 +131,7 @@
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.12</version>
 				<!--Eliminating some classes in Junit local code Coverage[JaCoCo-->
 
 				<executions>
