@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="patient service application.properties and checked jacoco">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
+    <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="added patient service jacoco report to workflow">
+      <change afterPath="$PROJECT_DIR$/patient-service/src/test/java/com/test/controller/AppointmentControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +84,7 @@
       <recent name="com.auth.repository" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.test.controller" />
       <recent name="com.doc.repository" />
     </key>
   </component>
@@ -287,15 +289,7 @@
       <workItem from="1736095620486" duration="6086000" />
       <workItem from="1736102739382" duration="19034000" />
       <workItem from="1736771462495" duration="3038000" />
-      <workItem from="1737400498166" duration="10583000" />
-    </task>
-    <task id="LOCAL-00089" summary="update ci">
-      <option name="closed" value="true" />
-      <created>1729779065779</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1729779065779</updated>
+      <workItem from="1737400498166" duration="10695000" />
     </task>
     <task id="LOCAL-00090" summary="update ci">
       <option name="closed" value="true" />
@@ -681,7 +675,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737410919657</updated>
     </task>
-    <option name="localTasksCounter" value="138" />
+    <task id="LOCAL-00138" summary="added patient service jacoco report to workflow">
+      <option name="closed" value="true" />
+      <created>1737411141820</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1737411141821</updated>
+    </task>
+    <option name="localTasksCounter" value="139" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -736,7 +738,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updated build ci proccess" />
     <MESSAGE value="delted build ci only sonar ci needed" />
     <MESSAGE value="test ci" />
     <MESSAGE value="added microservice structure" />
@@ -761,7 +762,8 @@
     <MESSAGE value="added patient service incl. models, controller and repositories. Included also unit test for user." />
     <MESSAGE value="improved application.propertiespropertie" />
     <MESSAGE value="patient service application.properties and checked jacoco" />
-    <option name="LAST_COMMIT_MESSAGE" value="patient service application.properties and checked jacoco" />
+    <MESSAGE value="added patient service jacoco report to workflow" />
+    <option name="LAST_COMMIT_MESSAGE" value="added patient service jacoco report to workflow" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/AdvancedMD_backend$JwtUtilsTest.ic" NAME="JwtUtilsTest Coverage Results" MODIFIED="1736175414426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
