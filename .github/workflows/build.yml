@@ -70,7 +70,7 @@ jobs:
                 add: '*.svg'
 
       - name: Generate JaCoCo Badges for Authentication service
-        id: jacocoMod1
+        id: jacocoMod3
         uses: cicirello/jacoco-badge-generator@v2
         with:
           badges-directory: badges
