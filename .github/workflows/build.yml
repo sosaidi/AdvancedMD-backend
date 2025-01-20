@@ -48,10 +48,6 @@ jobs:
           generate-branches-badge: true
           generate-summary: true
           jacoco-csv-file: authentication-service/target/site/jacoco/jacoco.csv
-          coverage-badge-filename: jacoco1.svg
-          branches-badge-filename: branches1.svg
-          coverage-label: coverage auth-service
-          branches-label: branches auth-service
 
       - name: Generate JaCoCo Badges for Doctor-service
         id: jacocoMod2
@@ -61,9 +57,12 @@ jobs:
           generate-branches-badge: true
           generate-summary: true
           jacoco-csv-file: doctor-service/target/site/jacoco/jacoco.csv
-          coverage-badge-filename: jacoco2.svg
-          branches-badge-filename: branches2.svg
-          coverage-label: coverage doctor-service
-          branches-label: branches doctor-service
+
+      - name: Commit and push the badge (if it changed)
+        uses: EndBug/add-and-commit@v7
+        with:
+                default_author: github_actions
+                message: 'commit badge'
+                add: '*.svg'
 
      
