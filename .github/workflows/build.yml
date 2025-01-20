@@ -29,19 +29,37 @@ jobs:
 
   jacoco:
     runs-on: ubuntu-latest
-
-
     steps:
-      - name: Parse JaCoCo XML
-        id: jacoco_reporter
-        run: |
-          COVERAGE=$(xmllint --xpath "string(//report/counter[@type='INSTRUCTION']/@covered)" doctor-service/target/site/jacoco/jacoco.xml)
-          MISSED=$(xmllint --xpath "string(//report/counter[@type='INSTRUCTION']/@missed)" doctor-service/target/site/jacoco/jacoco.xml)
-          TOTAL=$((COVERAGE + MISSED))
-          PERCENT=$((COVERAGE * 100 / TOTAL))
-          echo "::set-output name=coverage_percentage::$PERCENT"
-          echo "::set-output name=covered_lines::$COVERAGE"
-          echo "::set-output name=missed_lines::$MISSED"
-          echo "::set-output name=total_lines::$TOTAL"
+      - uses: actions/checkout@v3
+      - name: Set up the Java JDK
+        uses: actions/setup-java@v3
+        with:
+            java-version: '17'
+            distribution: 'adopt'
+
+      - name: Build with Maven
+        run: mvn -B test
+
+      - name: Generate JaCoCo Badges for Authentication service
+        id: jacocoMod1
+        uses: cicirello/jacoco-badge-generator@v2
+        with:
+          generate-branches-badge: true
+          jacoco-csv-file: authentication-service/target/site/jacoco/jacoco.csv
+          coverage-badge-filename: jacoco1.svg
+          branches-badge-filename: branches1.svg
+          coverage-label: coverage auth-service
+          branches-label: branches auth-service
+
+      - name: Generate JaCoCo Badges for Doctor-service
+        id: jacocoMod2
+        uses: cicirello/jacoco-badge-generator@v2
+        with:
+          generate-branches-badge: true
+          jacoco-csv-file: doctor-service/target/site/jacoco/jacoco.csv
+          coverage-badge-filename: jacoco2.svg
+          branches-badge-filename: branches2.svg
+          coverage-label: coverage doctor-service
+          branches-label: branches doctor-service
 
      

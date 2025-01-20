@@ -26,7 +26,7 @@
 		<maven.compiler.target>17</maven.compiler.target>
 
 		<sonar.coverage.jacoco.xmlReportPaths>
-			${project.basedir}/report-aggregate/target/site/
+			${project.basedir}/report-module/target/site/
 			jacoco-aggregate/jacoco.xml
 		</sonar.coverage.jacoco.xmlReportPaths>
 	</properties>
@@ -90,6 +90,9 @@
 			<scope>test</scope>
 		</dependency>
 
+
+
+
 	</dependencies>
 
 	<repositories>
@@ -126,13 +129,12 @@
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.8.12</version>
+				<version>0.7.8</version>
 				<executions>
 					<execution>
-						<id>report-aggregate</id>
-						<phase>verify</phase>
+						<id>prepare-agent</id>
 						<goals>
-							<goal>report-aggregate</goal>
+							<goal>prepare-agent</goal>
 						</goals>
 					</execution>
 				</executions>
