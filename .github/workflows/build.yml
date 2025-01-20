@@ -60,6 +60,11 @@ jobs:
           generate-summary: true
           jacoco-csv-file: doctor-service/target/site/jacoco/jacoco.csv
 
+      - name: Log coverage percentages to workflow output
+        run: |
+            echo "Example coverage = ${{ steps.jacoco.outputs.coverage }}"
+            echo "Example branches = ${{ steps.jacoco.outputs.branches }}"
+
       - name: Commit and push the badge (if it changed)
         uses: EndBug/add-and-commit@v7
         with:

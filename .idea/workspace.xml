@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="modified jacoco in yaml to get badges">
       <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,15 +295,7 @@
       <workItem from="1736095620486" duration="6086000" />
       <workItem from="1736102739382" duration="19034000" />
       <workItem from="1736771462495" duration="3038000" />
-      <workItem from="1737400498166" duration="7104000" />
-    </task>
-    <task id="LOCAL-00082" summary="added microservice structure">
-      <option name="closed" value="true" />
-      <created>1729773147001</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1729773147002</updated>
+      <workItem from="1737400498166" duration="7384000" />
     </task>
     <task id="LOCAL-00083" summary="added microservice structure">
       <option name="closed" value="true" />
@@ -688,7 +681,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737407496239</updated>
     </task>
-    <option name="localTasksCounter" value="131" />
+    <task id="LOCAL-00131" summary="modified jacoco in yaml to get badges">
+      <option name="closed" value="true" />
+      <created>1737407622159</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1737407622160</updated>
+    </task>
+    <option name="localTasksCounter" value="132" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
