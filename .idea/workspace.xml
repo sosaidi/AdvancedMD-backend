@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="modified jacoco in yaml">
+    <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="modified jacoco in yaml to get badges">
       <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -295,15 +295,7 @@
       <workItem from="1736095620486" duration="6086000" />
       <workItem from="1736102739382" duration="19034000" />
       <workItem from="1736771462495" duration="3038000" />
-      <workItem from="1737400498166" duration="5530000" />
-    </task>
-    <task id="LOCAL-00076" summary="updated build ci proccess">
-      <option name="closed" value="true" />
-      <created>1729706943618</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1729706943618</updated>
+      <workItem from="1737400498166" duration="5832000" />
     </task>
     <task id="LOCAL-00077" summary="delted build ci only sonar ci needed">
       <option name="closed" value="true" />
@@ -689,7 +681,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737405546570</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="modified jacoco in yaml to get badges">
+      <option name="closed" value="true" />
+      <created>1737406057022</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1737406057023</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -744,7 +744,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="pom update" />
     <MESSAGE value="aciton update" />
     <MESSAGE value="update test" />
     <MESSAGE value="update db" />
@@ -769,7 +768,8 @@
     <MESSAGE value="add jacoco reports" />
     <MESSAGE value="add jacoco xml to yml workflow for doctor service" />
     <MESSAGE value="modified jacoco in yaml" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified jacoco in yaml" />
+    <MESSAGE value="modified jacoco in yaml to get badges" />
+    <option name="LAST_COMMIT_MESSAGE" value="modified jacoco in yaml to get badges" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/AdvancedMD_backend$JwtUtilsTest.ic" NAME="JwtUtilsTest Coverage Results" MODIFIED="1736175414426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
