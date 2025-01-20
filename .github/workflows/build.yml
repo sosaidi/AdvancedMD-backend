@@ -50,6 +50,7 @@ jobs:
           generate-branches-badge: true
           generate-summary: true
           jacoco-csv-file: authentication-service/target/site/jacoco/jacoco.csv
+          workflow-summary-heading: JaCoCo Authservice
 
       - name: Generate JaCoCo Badges for Doctor-service
         id: jacocoMod2
@@ -58,19 +59,8 @@ jobs:
           badges-directory: badges
           generate-branches-badge: true
           generate-summary: true
+          workflow-summary-heading: JaCoCo Doctorservice
           jacoco-csv-file: doctor-service/target/site/jacoco/jacoco.csv
-
-      - name: JaCoCo Code Coverage Report
-        id: jacoco_reporter
-        uses: PavanMudigonda/jacoco-reporter@v5.0
-        with:
-            coverage_results_path: authentication-service/target/site/jacoco/jacoco.xml
-            coverage_report_name: Authentication- Service Coverage
-            coverage_report_title: JaCoCo
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            minimum_coverage: 10
-            fail_below_threshold: false
-            publish_only_summary: false
 
       - name: Commit and push the badge (if it changed)
         uses: EndBug/add-and-commit@v7
