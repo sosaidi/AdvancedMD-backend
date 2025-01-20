@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="modified jacoco in yaml to get badges">
       <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,15 +295,7 @@
       <workItem from="1736095620486" duration="6086000" />
       <workItem from="1736102739382" duration="19034000" />
       <workItem from="1736771462495" duration="3038000" />
-      <workItem from="1737400498166" duration="5859000" />
-    </task>
-    <task id="LOCAL-00078" summary="test ci">
-      <option name="closed" value="true" />
-      <created>1729771671739</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1729771671739</updated>
+      <workItem from="1737400498166" duration="6080000" />
     </task>
     <task id="LOCAL-00079" summary="test ci">
       <option name="closed" value="true" />
@@ -688,7 +681,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737406349500</updated>
     </task>
-    <option name="localTasksCounter" value="127" />
+    <task id="LOCAL-00127" summary="modified jacoco in yaml to get badges">
+      <option name="closed" value="true" />
+      <created>1737406377115</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1737406377115</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
