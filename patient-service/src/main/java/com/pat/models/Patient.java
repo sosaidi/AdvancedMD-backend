@@ -13,8 +13,9 @@ public class Patient {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int patient_id;
 
-    @NotBlank
-    private int user_id;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", referencedColumnName = "user_id", insertable = false, updatable = false)
+    private User user;
 
     @NotBlank
     @Size(max = 255)
@@ -44,16 +45,12 @@ public class Patient {
     @Size(max = 50)
     private String status;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", referencedColumnName = "user_id", insertable = false, updatable = false)
-    private User user;
-
     public Patient() {
     }
 
     public Patient(int user_id, String firstname, String lastname, Date dob, String gender, String address,
                    String phone_number, Date admission_date, Date discharge_date, String status) {
-        this.user_id = user_id;
+        this.patient_id = user_id;
         this.firstname = firstname;
         this.lastname = lastname;
         this.dob = dob;
@@ -74,11 +71,11 @@ public class Patient {
     }
 
     public int getUserId() {
-        return user_id;
+        return user.getId();
     }
 
     public void setUserId(int user_id) {
-        this.user_id = user_id;
+        this.patient_id = user_id;
     }
 
     public String getFirstname() {
