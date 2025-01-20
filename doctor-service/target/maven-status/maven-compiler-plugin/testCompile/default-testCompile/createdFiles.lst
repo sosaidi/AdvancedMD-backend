@@ -1,4 +1,4 @@
-com/test/controller/AppointmentControllerTest.class
 com/test/service/UserDetailsServiceImplTest.class
+com/test/controller/AppointmentControllerTest.class
 com/test/repository/UserRepositoryTest.class
 com/test/repository/AppointmentRepositoryTest.class
