@@ -62,6 +62,16 @@ jobs:
           workflow-summary-heading: JaCoCo Doctorservice
           jacoco-csv-file: doctor-service/target/site/jacoco/jacoco.csv
 
+      - name: Generate JaCoCo Badges for Patient-service
+        id: jacocoMod2
+        uses: cicirello/jacoco-badge-generator@v2
+        with:
+          badges-directory: badges
+          generate-branches-badge: true
+          generate-summary: true
+          workflow-summary-heading: JaCoCo Patientservice
+          jacoco-csv-file: patient-service/target/site/jacoco/jacoco.csv
+
       - name: Commit and push the badge (if it changed)
         uses: EndBug/add-and-commit@v7
         with:
