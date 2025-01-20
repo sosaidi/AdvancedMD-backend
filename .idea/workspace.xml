@@ -4,37 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="add jacoco xml to yml workflow for doctor service">
+    <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="modified jacoco in yaml">
       <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/jacoco.exec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco/jacoco.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/target/surefire-reports/TEST-com.test.controller.AuthControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/surefire-reports/TEST-com.test.controller.AuthControllerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/target/surefire-reports/TEST-com.test.repository.UserRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/surefire-reports/TEST-com.test.repository.UserRepositoryTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/target/surefire-reports/TEST-com.test.service.UserDetailsServiceImplTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/surefire-reports/TEST-com.test.service.UserDetailsServiceImplTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/target/surefire-reports/TEST-com.test.utils.JwtUtilsTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/surefire-reports/TEST-com.test.utils.JwtUtilsTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/target/surefire-reports/com.test.controller.AuthControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/surefire-reports/com.test.controller.AuthControllerTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/target/surefire-reports/com.test.repository.UserRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/surefire-reports/com.test.repository.UserRepositoryTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/target/surefire-reports/com.test.service.UserDetailsServiceImplTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/surefire-reports/com.test.service.UserDetailsServiceImplTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/target/surefire-reports/com.test.utils.JwtUtilsTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/surefire-reports/com.test.utils.JwtUtilsTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor-service/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/jacoco.exec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor-service/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor-service/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco/jacoco.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor-service/target/surefire-reports/TEST-com.test.controller.AppointmentControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/surefire-reports/TEST-com.test.controller.AppointmentControllerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor-service/target/surefire-reports/TEST-com.test.repository.AppointmentRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/surefire-reports/TEST-com.test.repository.AppointmentRepositoryTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor-service/target/surefire-reports/TEST-com.test.repository.UserRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/surefire-reports/TEST-com.test.repository.UserRepositoryTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor-service/target/surefire-reports/TEST-com.test.service.UserDetailsServiceImplTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/surefire-reports/TEST-com.test.service.UserDetailsServiceImplTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor-service/target/surefire-reports/com.test.controller.AppointmentControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/surefire-reports/com.test.controller.AppointmentControllerTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor-service/target/surefire-reports/com.test.repository.AppointmentRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/surefire-reports/com.test.repository.AppointmentRepositoryTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor-service/target/surefire-reports/com.test.repository.UserRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/surefire-reports/com.test.repository.UserRepositoryTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctor-service/target/surefire-reports/com.test.service.UserDetailsServiceImplTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/surefire-reports/com.test.service.UserDetailsServiceImplTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -323,15 +295,7 @@
       <workItem from="1736095620486" duration="6086000" />
       <workItem from="1736102739382" duration="19034000" />
       <workItem from="1736771462495" duration="3038000" />
-      <workItem from="1737400498166" duration="5004000" />
-    </task>
-    <task id="LOCAL-00075" summary="updated build ci proccess">
-      <option name="closed" value="true" />
-      <created>1729706790566</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1729706790568</updated>
+      <workItem from="1737400498166" duration="5530000" />
     </task>
     <task id="LOCAL-00076" summary="updated build ci proccess">
       <option name="closed" value="true" />
@@ -717,7 +681,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737402593183</updated>
     </task>
-    <option name="localTasksCounter" value="124" />
+    <task id="LOCAL-00124" summary="modified jacoco in yaml">
+      <option name="closed" value="true" />
+      <created>1737405546568</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1737405546570</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -772,7 +744,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updated build action" />
     <MESSAGE value="pom update" />
     <MESSAGE value="aciton update" />
     <MESSAGE value="update test" />
@@ -797,7 +768,8 @@
     <MESSAGE value="improved UNIT tests for doctor service and partly integration test for user service" />
     <MESSAGE value="add jacoco reports" />
     <MESSAGE value="add jacoco xml to yml workflow for doctor service" />
-    <option name="LAST_COMMIT_MESSAGE" value="add jacoco xml to yml workflow for doctor service" />
+    <MESSAGE value="modified jacoco in yaml" />
+    <option name="LAST_COMMIT_MESSAGE" value="modified jacoco in yaml" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/AdvancedMD_backend$JwtUtilsTest.ic" NAME="JwtUtilsTest Coverage Results" MODIFIED="1736175414426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
