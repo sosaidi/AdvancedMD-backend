@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Appointment.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">patient-service</a> &gt; <a href="index.source.html" class="el_package">com.pat.models</a> &gt; <span class="el_source">Appointment.java</span></div><h1>Appointment.java</h1><pre class="source lang-java linenums">package com.pat.models;
+
+
+import jakarta.persistence.*;
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = &quot;appointments&quot;)
+public class Appointment {
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long appId;
+
+  @Column(name = &quot;patient_id&quot;, nullable = false)
+  private Long patientId;
+
+  @Column(name = &quot;doctor_id&quot;, nullable = false)
+  private Long doctorId;
+
+  @Column(name = &quot;room_id&quot;)
+  private Long roomId;
+
+  @Column(name = &quot;app_date&quot;, nullable = false)
+  private LocalDateTime appDate;
+
+  @Column(name = &quot;status&quot;, nullable = false)
+  private String status;
+
+  // Constructors
+<span class="fc" id="L31">  public Appointment() {}</span>
+
+<span class="nc" id="L33">  public Appointment(Long patientId, Long doctorId, Long roomId, LocalDateTime appDate, String status) {</span>
+<span class="nc" id="L34">    this.patientId = patientId;</span>
+<span class="nc" id="L35">    this.doctorId = doctorId;</span>
+<span class="nc" id="L36">    this.roomId = roomId;</span>
+<span class="nc" id="L37">    this.appDate = appDate;</span>
+<span class="nc" id="L38">    this.status = status;</span>
+<span class="nc" id="L39">  }</span>
+
+  // Getters and Setters
+  public Long getAppId() {
+<span class="fc" id="L43">    return appId;</span>
+  }
+
+  public void setAppId(Long appId) {
+<span class="fc" id="L47">    this.appId = appId;</span>
+<span class="fc" id="L48">  }</span>
+
+  public Long getPatientId() {
+<span class="fc" id="L51">    return patientId;</span>
+  }
+
+  public void setPatientId(Long patientId) {
+<span class="fc" id="L55">    this.patientId = patientId;</span>
+<span class="fc" id="L56">  }</span>
+
+  public Long getDoctorId() {
+<span class="fc" id="L59">    return doctorId;</span>
+  }
+
+  public void setDoctorId(Long doctorId) {
+<span class="fc" id="L63">    this.doctorId = doctorId;</span>
+<span class="fc" id="L64">  }</span>
+
+  public Long getRoomId() {
+<span class="nc" id="L67">    return roomId;</span>
+  }
+
+  public void setRoomId(Long roomId) {
+<span class="nc" id="L71">    this.roomId = roomId;</span>
+<span class="nc" id="L72">  }</span>
+
+  public LocalDateTime getAppDate() {
+<span class="nc" id="L75">    return appDate;</span>
+  }
+
+  public void setAppDate(LocalDateTime appDate) {
+<span class="fc" id="L79">    this.appDate = appDate;</span>
+<span class="fc" id="L80">  }</span>
+
+  public String getStatus() {
+<span class="fc" id="L83">    return status;</span>
+  }
+
+  public void setStatus(String status) {
+<span class="fc" id="L87">    this.status = status;</span>
+<span class="fc" id="L88">  }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
