@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="improved UNIT tests for doctor service and partly integration test for user service">
+      <change beforePath="$PROJECT_DIR$/doctor-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/3-jwt-authentication" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2nnr6HnjowgZb8MWZmqWAiL1via" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/5-patient-management-api-and-db&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-23&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/annclermont/Desktop/AdvancedMD-backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.27701148&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;,
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/doctor-service/src/main/java/com/doc" />
+      <recent name="$PROJECT_DIR$/doctor-service/src/test/java/com/test" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/doctor-service/src/main/java/com/springjwt/models" />
+      <recent name="$PROJECT_DIR$/doctor-service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/AuthenticationService" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.auth.repository" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.doc.repository" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="Application" />
+        <option value="JarApplication" />
+        <option value="MavenRunConfiguration" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.JwtUtilsTest">
+    <configuration name="AppointmentRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="doctor-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.test.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.test.repository.AppointmentRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppointmentRepositoryTest.testDeleteByAppId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="doctor-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.test.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.test.repository.AppointmentRepositoryTest" />
+      <option name="METHOD_NAME" value="testDeleteByAppId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppointmentRepositoryTest.testFindByDoctorId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="doctor-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.test.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.test.repository.AppointmentRepositoryTest" />
+      <option name="METHOD_NAME" value="testFindByDoctorId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JwtUtilsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="authentication-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.test.utils" />
+      <option name="MAIN_CLASS_NAME" value="com.test.utils.JwtUtilsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootSecurityJwtApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-security-jwt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.springjwt.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.springjwt" />
+      <option name="MAIN_CLASS_NAME" value="com.springjwt.SpringBootSecurityJwtApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootSecurityJwtApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-security-jwt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.springjwt.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.springjwt" />
+      <option name="MAIN_CLASS_NAME" value="com.springjwt.SpringBootSecurityJwtApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="doctor-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.test.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.test.repository.UserRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="advancedMD" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="advancedMD" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="authentication-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.auth.AuthApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DoctorApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="doctor-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.doc.DoctorApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootSecurityJwtApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="spring-boot-security-jwt" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.springjwt.SpringBootSecurityJwtApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.SpringBootSecurityJwtApplicationTests" />
+      <item itemvalue="JUnit.SpringBootSecurityJwtApplicationTests.contextLoads" />
+      <item itemvalue="JUnit.AppointmentRepositoryTest" />
+      <item itemvalue="JUnit.AppointmentRepositoryTest.testDeleteByAppId" />
+      <item itemvalue="JUnit.AppointmentRepositoryTest.testFindByDoctorId" />
+      <item itemvalue="JUnit.JwtUtilsTest" />
+      <item itemvalue="JUnit.UserRepositoryTest" />
+      <item itemvalue="Spring Boot.SpringBootSecurityJwtApplication" />
+      <item itemvalue="Spring Boot.AuthApp" />
+      <item itemvalue="Spring Boot.DoctorApp" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.JwtUtilsTest" />
+        <item itemvalue="JUnit.AppointmentRepositoryTest" />
+        <item itemvalue="JUnit.AppointmentRepositoryTest.testDeleteByAppId" />
+        <item itemvalue="JUnit.AppointmentRepositoryTest.testFindByDoctorId" />
+        <item itemvalue="JUnit.UserRepositoryTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="" />
+      <created>1729619507327</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729619507327</updated>
+      <workItem from="1729619514222" duration="42611000" />
+      <workItem from="1729769762218" duration="13506000" />
+      <workItem from="1729792138989" duration="4453000" />
+      <workItem from="1730193247676" duration="615000" />
+      <workItem from="1733411002706" duration="711000" />
+      <workItem from="1733678807859" duration="19099000" />
+      <workItem from="1733814570066" duration="655000" />
+      <workItem from="1733996469839" duration="3763000" />
+      <workItem from="1735499505819" duration="4754000" />
+      <workItem from="1736023247170" duration="3195000" />
+      <workItem from="1736095620486" duration="6086000" />
+      <workItem from="1736102739382" duration="19034000" />
+      <workItem from="1736771462495" duration="3038000" />
+      <workItem from="1737400498166" duration="455000" />
+    </task>
+    <task id="LOCAL-00073" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729703923532</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1729703923533</updated>
+    </task>
+    <task id="LOCAL-00074" summary="updated build ci proccess">
+      <option name="closed" value="true" />
+      <created>1729706600948</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1729706600950</updated>
+    </task>
+    <task id="LOCAL-00075" summary="updated build ci proccess">
+      <option name="closed" value="true" />
+      <created>1729706790566</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1729706790568</updated>
+    </task>
+    <task id="LOCAL-00076" summary="updated build ci proccess">
+      <option name="closed" value="true" />
+      <created>1729706943618</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1729706943618</updated>
+    </task>
+    <task id="LOCAL-00077" summary="delted build ci only sonar ci needed">
+      <option name="closed" value="true" />
+      <created>1729770064970</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1729770064971</updated>
+    </task>
+    <task id="LOCAL-00078" summary="test ci">
+      <option name="closed" value="true" />
+      <created>1729771671739</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1729771671739</updated>
+    </task>
+    <task id="LOCAL-00079" summary="test ci">
+      <option name="closed" value="true" />
+      <created>1729771743916</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1729771743918</updated>
+    </task>
+    <task id="LOCAL-00080" summary="test ci">
+      <option name="closed" value="true" />
+      <created>1729771887991</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1729771887992</updated>
+    </task>
+    <task id="LOCAL-00081" summary="test ci">
+      <option name="closed" value="true" />
+      <created>1729772009315</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1729772009316</updated>
+    </task>
+    <task id="LOCAL-00082" summary="added microservice structure">
+      <option name="closed" value="true" />
+      <created>1729773147001</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1729773147002</updated>
+    </task>
+    <task id="LOCAL-00083" summary="added microservice structure">
+      <option name="closed" value="true" />
+      <created>1729775762399</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1729775762401</updated>
+    </task>
+    <task id="LOCAL-00084" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729777835093</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1729777835094</updated>
+    </task>
+    <task id="LOCAL-00085" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729777911128</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1729777911128</updated>
+    </task>
+    <task id="LOCAL-00086" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729777985535</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1729777985535</updated>
+    </task>
+    <task id="LOCAL-00087" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729778353875</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1729778353875</updated>
+    </task>
+    <task id="LOCAL-00088" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729779028947</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1729779028948</updated>
+    </task>
+    <task id="LOCAL-00089" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729779065779</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1729779065779</updated>
+    </task>
+    <task id="LOCAL-00090" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729779141529</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1729779141529</updated>
+    </task>
+    <task id="LOCAL-00091" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729779196429</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1729779196429</updated>
+    </task>
+    <task id="LOCAL-00092" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729779311290</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1729779311290</updated>
+    </task>
+    <task id="LOCAL-00093" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729779566208</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1729779566208</updated>
+    </task>
+    <task id="LOCAL-00094" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729779593792</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1729779593793</updated>
+    </task>
+    <task id="LOCAL-00095" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729780287759</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1729780287759</updated>
+    </task>
+    <task id="LOCAL-00096" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729780493307</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1729780493308</updated>
+    </task>
+    <task id="LOCAL-00097" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729780510888</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1729780510888</updated>
+    </task>
+    <task id="LOCAL-00098" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729780539362</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1729780539362</updated>
+    </task>
+    <task id="LOCAL-00099" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729783979479</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1729783979480</updated>
+    </task>
+    <task id="LOCAL-00100" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729784068303</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1729784068304</updated>
+    </task>
+    <task id="LOCAL-00101" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729784167417</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1729784167418</updated>
+    </task>
+    <task id="LOCAL-00102" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729784235806</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1729784235807</updated>
+    </task>
+    <task id="LOCAL-00103" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729784399758</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1729784399759</updated>
+    </task>
+    <task id="LOCAL-00104" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729792278639</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1729792278640</updated>
+    </task>
+    <task id="LOCAL-00105" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729792387825</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1729792387826</updated>
+    </task>
+    <task id="LOCAL-00106" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729794285195</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1729794285196</updated>
+    </task>
+    <task id="LOCAL-00107" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729794322861</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1729794322862</updated>
+    </task>
+    <task id="LOCAL-00108" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729794357885</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1729794357885</updated>
+    </task>
+    <task id="LOCAL-00109" summary="updated README.md">
+      <option name="closed" value="true" />
+      <created>1729795617364</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1729795617365</updated>
+    </task>
+    <task id="LOCAL-00110" summary="adapted models and controllers to database schema">
+      <option name="closed" value="true" />
+      <created>1733684678130</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1733684678148</updated>
+    </task>
+    <task id="LOCAL-00111" summary="adapted models and controllers and fixes it accroding to database schema. Now User signUp/signIn is working!">
+      <option name="closed" value="true" />
+      <created>1733692721023</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1733692721029</updated>
+    </task>
+    <task id="LOCAL-00112" summary="added webConfig for cross origins to avoid these error">
+      <option name="closed" value="true" />
+      <created>1733736503625</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1733736503628</updated>
+    </task>
+    <task id="LOCAL-00113" summary="modified AuthController to avoid cross origin error">
+      <option name="closed" value="true" />
+      <created>1733738537216</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1733738537217</updated>
+    </task>
+    <task id="LOCAL-00114" summary="modified AuthController and added signout">
+      <option name="closed" value="true" />
+      <created>1733745602721</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1733745602723</updated>
+    </task>
+    <task id="LOCAL-00115" summary="implemented doctor microservice with first controller and model Appointment.java">
+      <option name="closed" value="true" />
+      <created>1735900296955</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1735900296956</updated>
+    </task>
+    <task id="LOCAL-00116" summary="implemented models ToDos.java and copied Role.java, User.java and ERole.java from previous service">
+      <option name="closed" value="true" />
+      <created>1735901639855</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1735901639855</updated>
+    </task>
+    <task id="LOCAL-00117" summary="updated application.properties for specified ports and names">
+      <option name="closed" value="true" />
+      <created>1736026124171</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1736026124182</updated>
+    </task>
+    <task id="LOCAL-00118" summary="major update: fixed some bugs recording the jwt token so now authentication based on roles like ROLE_DOCTOR are working also implemented AppointmentController.java incl. Model and repository to test Doctor functionality with JPA.">
+      <option name="closed" value="true" />
+      <created>1736026254960</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1736026254961</updated>
+    </task>
+    <task id="LOCAL-00119" summary="added UNIT tests for doctor service and partly integration test for user service">
+      <option name="closed" value="true" />
+      <created>1736113084274</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1736113084285</updated>
+    </task>
+    <task id="LOCAL-00120" summary="added UNIT tests for doctor service and partly integration test for user service">
+      <option name="closed" value="true" />
+      <created>1736175028459</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1736175028465</updated>
+    </task>
+    <task id="LOCAL-00121" summary="improved UNIT tests for doctor service and partly integration test for user service">
+      <option name="closed" value="true" />
+      <created>1736774649404</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1736774649406</updated>
+    </task>
+    <option name="localTasksCounter" value="122" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/feature/2-role-based-access-control" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="main" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/feature/2-role-based-access-control" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="TEXT_FILTER_SETTINGS">
+                <TextFilterSettings>
+                  <option name="MATCH_CASE" value="true" />
+                </TextFilterSettings>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update build action" />
+    <MESSAGE value="updated packages and pom" />
+    <MESSAGE value="updated build action" />
+    <MESSAGE value="pom update" />
+    <MESSAGE value="aciton update" />
+    <MESSAGE value="update test" />
+    <MESSAGE value="update db" />
+    <MESSAGE value="updated build ci proccess" />
+    <MESSAGE value="delted build ci only sonar ci needed" />
+    <MESSAGE value="test ci" />
+    <MESSAGE value="added microservice structure" />
+    <MESSAGE value="update ci" />
+    <MESSAGE value="updated README.md" />
+    <MESSAGE value="adapted models and controllers to database schmea" />
+    <MESSAGE value="adapted models and controllers and fixes it accroding to database schema. Now User signUp/signIn is working!" />
+    <MESSAGE value="added webConfig for cross origins to avoid these error" />
+    <MESSAGE value="modified AuthController to avoid cross origin error" />
+    <MESSAGE value="modified AuthController and added signout" />
+    <MESSAGE value="implemented doctor microservice with first controller and model Appointment.java" />
+    <MESSAGE value="implemented models ToDos.java and copied Role.java, User.java and ERole.java from previous service" />
+    <MESSAGE value="updated application.properties for specified ports and names" />
+    <MESSAGE value="major update: fixed some bugs recording the jwt token so now authentication based on roles like ROLE_DOCTOR are working also implemented AppointmentController.java incl. Model and repository to test Doctor functionality with JPA." />
+    <MESSAGE value="added integration tests for auth service" />
+    <MESSAGE value="added UNIT tests for doctor service and partly integration test for user service" />
+    <MESSAGE value="improved UNIT tests for doctor service and partly integration test for user service" />
+    <option name="LAST_COMMIT_MESSAGE" value="improved UNIT tests for doctor service and partly integration test for user service" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/AdvancedMD_backend$JwtUtilsTest.ic" NAME="JwtUtilsTest Coverage Results" MODIFIED="1736175414426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.test.utils.*</FILTER>
+    </SUITE>
+  </component>
+</project>

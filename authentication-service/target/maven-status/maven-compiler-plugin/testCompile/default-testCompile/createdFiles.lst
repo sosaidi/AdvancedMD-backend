@@ -1,0 +1,4 @@
+com/test/utils/JwtUtilsTest.class
+com/test/service/UserDetailsServiceImplTest.class
+com/test/repository/UserRepositoryTest.class
+com/test/controller/AuthControllerTest.class

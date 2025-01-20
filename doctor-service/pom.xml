@@ -131,16 +131,25 @@
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
+				<!--Eliminating some classes in Junit local code Coverage[JaCoCo-->
+
 				<executions>
 					<execution>
-						<id>report-aggregate</id>
-						<phase>verify</phase>
+						<id>prepare-agent</id>
 						<goals>
-							<goal>report-aggregate</goal>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>report</id>
+						<phase>test</phase>
+						<goals>
+							<goal>report</goal>
 						</goals>
 					</execution>
 				</executions>
 			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-failsafe-plugin</artifactId>
