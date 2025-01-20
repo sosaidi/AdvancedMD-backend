@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="modified jacoco in yaml to get badges">
       <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,15 +294,7 @@
       <workItem from="1736095620486" duration="6086000" />
       <workItem from="1736102739382" duration="19034000" />
       <workItem from="1736771462495" duration="3038000" />
-      <workItem from="1737400498166" duration="5832000" />
-    </task>
-    <task id="LOCAL-00077" summary="delted build ci only sonar ci needed">
-      <option name="closed" value="true" />
-      <created>1729770064970</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1729770064971</updated>
+      <workItem from="1737400498166" duration="5859000" />
     </task>
     <task id="LOCAL-00078" summary="test ci">
       <option name="closed" value="true" />
@@ -689,7 +680,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737406057023</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="modified jacoco in yaml to get badges">
+      <option name="closed" value="true" />
+      <created>1737406349499</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1737406349500</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
