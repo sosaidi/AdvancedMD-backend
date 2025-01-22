@@ -1,0 +1,5 @@
+/Users/annclermont/Desktop/AdvancedMD-backend/authentication-service/src/test/java/com/test/repository/UserRepositoryTest.java
+/Users/annclermont/Desktop/AdvancedMD-backend/authentication-service/src/test/java/com/test/security/jwt/AuthTokenFilterTest.java
+/Users/annclermont/Desktop/AdvancedMD-backend/authentication-service/src/test/java/com/test/controller/AuthControllerTest.java
+/Users/annclermont/Desktop/AdvancedMD-backend/authentication-service/src/test/java/com/test/security/service/UserDetailsServiceImplTest.java
+/Users/annclermont/Desktop/AdvancedMD-backend/authentication-service/src/test/java/com/test/security/jwt/JWTUtilsTest.java

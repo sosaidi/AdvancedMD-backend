@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="updated db file and also fixes some bugs, now all services start without problem">
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/test/java/com/test/security/jwt/AuthTokenFilterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/test/java/com/test/security/jwt/JWTUtilsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/doc/controllers/BillingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/doc/controllers/DoctorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/doc/controllers/MedicalRecordController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/doc/controllers/PatientController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/doc/controllers/PrescriptionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/doc/models/Billing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/doc/models/Doctor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/doc/models/MedicalRecord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/doc/models/Patient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/doc/models/Prescription.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/doc/repository/BillingRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/doc/repository/DoctorRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/doc/repository/MedicalRecordRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/doc/repository/PatientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/doc/repository/PrescriptionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/test/java/com/test/controller/BillingControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/test/java/com/test/controller/DoctorControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/test/java/com/test/controller/MedicalRecordControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/test/java/com/test/controller/PatientControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/test/java/com/test/controller/PerscriptionControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/test/java/com/test/model/AppointmentTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/test/java/com/test/model/DoctorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/test/java/com/test/model/MedicalRecordTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/test/java/com/test/model/PatientTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/test/java/com/test/model/PerscriptionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/test/java/com/test/model/RoleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/test/java/com/test/model/ToDosTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/test/java/com/test/security/jwt/AuthTokenFilterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctor-service/src/test/java/com/test/security/jwt/JWTUtilsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pat/controllers/BillingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pat/controllers/MedicalRecordController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pat/controllers/PrescriptionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pat/models/Billing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pat/models/Doctor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pat/models/MedicalRecord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pat/models/Prescription.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pat/repository/BillingRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pat/repository/MedicalRecordRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pat/repository/PrescriptionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patient-service/src/test/java/com/test/controller/BillingControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patient-service/src/test/java/com/test/controller/MedicalRecordControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patient-service/src/test/java/com/test/controller/PerscriptionControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patient-service/src/test/java/com/test/model/AppointmentTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patient-service/src/test/java/com/test/model/BillingTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patient-service/src/test/java/com/test/model/DoctorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patient-service/src/test/java/com/test/model/MedicalRecordTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patient-service/src/test/java/com/test/model/PatientTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patient-service/src/test/java/com/test/model/PrescriptionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patient-service/src/test/java/com/test/model/RoleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patient-service/src/test/java/com/test/model/UserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patient-service/src/test/java/com/test/security/jwt/AuthTokenFilterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patient-service/src/test/java/com/test/security/jwt/JwtUtilsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdvancedMD.sql" beforeDir="false" afterPath="$PROJECT_DIR$/AdvancedMD.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/auth/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/auth/controllers/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/auth/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/auth/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/test/java/com/test/service/UserDetailsServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/test/java/com/test/security/service/UserDetailsServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/test/java/com/test/utils/JwtUtilsTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/jacoco.exec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.controllers/AuthController.html" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.controllers/AuthController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.controllers/AuthController.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.controllers/AuthController.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.controllers/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.controllers/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.controllers/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.controllers/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.models/User.html" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.models/User.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.models/User.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.models/User.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.models/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.models/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.models/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.models/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.security.jwt/JwtUtils.html" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.security.jwt/JwtUtils.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.security.jwt/JwtUtils.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.security.jwt/JwtUtils.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.security.jwt/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.security.jwt/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.security.jwt/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.security.jwt/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.security.services/UserDetailsImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.security.services/UserDetailsImpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.security.services/UserDetailsImpl.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.security.services/UserDetailsImpl.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.security.services/UserDetailsServiceImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.security.services/UserDetailsServiceImpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.security.services/UserDetailsServiceImpl.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.security.services/UserDetailsServiceImpl.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.security.services/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.security.services/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.security.services/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco/com.auth.security.services/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/site/jacoco/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/site/jacoco/jacoco.csv" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco/jacoco.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/site/jacoco/jacoco.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/surefire-reports/TEST-com.test.controller.AuthControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/surefire-reports/TEST-com.test.controller.AuthControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/surefire-reports/TEST-com.test.repository.UserRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/surefire-reports/TEST-com.test.repository.UserRepositoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/surefire-reports/TEST-com.test.service.UserDetailsServiceImplTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/surefire-reports/TEST-com.test.utils.JwtUtilsTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/surefire-reports/com.test.controller.AuthControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/surefire-reports/com.test.controller.AuthControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/surefire-reports/com.test.repository.UserRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/target/surefire-reports/com.test.repository.UserRepositoryTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/surefire-reports/com.test.service.UserDetailsServiceImplTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/target/surefire-reports/com.test.utils.JwtUtilsTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/src/main/java/com/doc/controllers/AppointmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/doc/controllers/AppointmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/src/main/java/com/doc/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/doc/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/src/main/java/com/doc/repository/AppointmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/doc/repository/AppointmentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/src/main/java/com/doc/security/jwt/AuthTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/doc/security/jwt/AuthTokenFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/src/main/java/com/doc/security/jwt/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/src/main/java/com/doc/security/jwt/JwtUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/src/test/java/com/test/controller/AppointmentControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/src/test/java/com/test/controller/AppointmentControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/src/test/java/com/test/service/UserDetailsServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/src/test/java/com/test/security/service/UserDetailsServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/jacoco.exec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.controllers/AppointmentController.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.controllers/AppointmentController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.controllers/AppointmentController.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.controllers/AppointmentController.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.controllers/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.controllers/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.controllers/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.controllers/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.models/Appointment.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.models/Appointment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.models/Appointment.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.models/Appointment.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.models/ERole.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.models/ERole.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.models/ERole.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.models/ERole.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.models/Role.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.models/Role.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.models/Role.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.models/Role.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.models/ToDos.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.models/ToDos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.models/ToDos.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.models/ToDos.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.models/User.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.models/User.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.models/User.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.models/User.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.models/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.models/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.models/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.models/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.security.jwt/AuthTokenFilter.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.security.jwt/AuthTokenFilter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.security.jwt/AuthTokenFilter.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.security.jwt/AuthTokenFilter.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.security.jwt/JwtUtils.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.security.jwt/JwtUtils.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.security.jwt/JwtUtils.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.security.jwt/JwtUtils.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.security.jwt/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.security.jwt/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.security.jwt/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco/com.doc.security.jwt/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/site/jacoco/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/site/jacoco/jacoco.csv" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco/jacoco.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/site/jacoco/jacoco.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/surefire-reports/TEST-com.test.controller.AppointmentControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/surefire-reports/TEST-com.test.controller.AppointmentControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/surefire-reports/TEST-com.test.repository.AppointmentRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/surefire-reports/TEST-com.test.repository.AppointmentRepositoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/surefire-reports/TEST-com.test.repository.UserRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/surefire-reports/TEST-com.test.repository.UserRepositoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/surefire-reports/TEST-com.test.service.UserDetailsServiceImplTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/surefire-reports/com.test.controller.AppointmentControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/surefire-reports/com.test.controller.AppointmentControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/surefire-reports/com.test.repository.AppointmentRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/surefire-reports/com.test.repository.AppointmentRepositoryTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/surefire-reports/com.test.repository.UserRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/doctor-service/target/surefire-reports/com.test.repository.UserRepositoryTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctor-service/target/surefire-reports/com.test.service.UserDetailsServiceImplTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pat/controllers/AppointmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pat/controllers/AppointmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pat/models/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pat/models/Appointment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pat/models/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pat/models/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pat/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pat/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pat/security/jwt/AuthTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pat/security/jwt/AuthTokenFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/src/main/java/com/pat/security/jwt/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/java/com/pat/security/jwt/JwtUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/src/test/java/com/test/service/UserDetailsServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/src/test/java/com/test/security/service/UserDetailsServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/jacoco.exec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.controllers/AppointmentController.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.controllers/AppointmentController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.controllers/AppointmentController.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.controllers/AppointmentController.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.controllers/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.controllers/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.controllers/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.controllers/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.models/Appointment.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.models/Appointment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.models/Appointment.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.models/Appointment.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.models/ERole.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.models/ERole.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.models/ERole.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.models/ERole.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.models/Patient.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.models/Patient.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.models/Patient.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.models/Patient.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.models/Role.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.models/Role.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.models/Role.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.models/Role.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.models/User.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.models/User.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.models/User.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.models/User.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.models/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.models/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.models/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.models/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.security.jwt/AuthTokenFilter.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.security.jwt/AuthTokenFilter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.security.jwt/AuthTokenFilter.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.security.jwt/AuthTokenFilter.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.security.jwt/JwtUtils.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.security.jwt/JwtUtils.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.security.jwt/JwtUtils.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.security.jwt/JwtUtils.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.security.jwt/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.security.jwt/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.security.jwt/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/site/jacoco/com.pat.security.jwt/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/site/jacoco/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/site/jacoco/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/site/jacoco/jacoco.csv" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/site/jacoco/jacoco.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/site/jacoco/jacoco.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/surefire-reports/TEST-com.test.repository.AppointmentRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/surefire-reports/TEST-com.test.repository.AppointmentRepositoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/surefire-reports/TEST-com.test.repository.UserRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/surefire-reports/TEST-com.test.repository.UserRepositoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/surefire-reports/TEST-com.test.service.UserDetailsServiceImplTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/surefire-reports/com.test.repository.AppointmentRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/surefire-reports/com.test.repository.AppointmentRepositoryTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/surefire-reports/com.test.repository.UserRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/patient-service/target/surefire-reports/com.test.repository.UserRepositoryTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-service/target/surefire-reports/com.test.service.UserDetailsServiceImplTest.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/3-jwt-authentication" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2nnr6HnjowgZb8MWZmqWAiL1via" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "feature/5-patient-management-api-and-db",
+    "jdk.selected.JAVA_MODULE": "openjdk-21",
+    "last_opened_file_path": "/Users/annclermont/Desktop/AdvancedMD-backend/patient-service/src/test/java/com/test",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.27701148",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql",
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/patient-service/src/test/java/com/test" />
+      <recent name="$PROJECT_DIR$/patient-service/src/test/java/com/test/model" />
+      <recent name="$PROJECT_DIR$/patient-service/src/test/java/com/test/controller" />
+      <recent name="$PROJECT_DIR$/authentication-service/src/test/java/com/test" />
+      <recent name="$PROJECT_DIR$/patient-service/src/main/java/com/pat/models" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/AuthenticationService" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.auth.repository" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.test.controller" />
+      <recent name="com.pat.models" />
+      <recent name="com.pat.repository" />
+      <recent name="com.pat.controllers" />
+      <recent name="com.doc.repository" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="Application" />
+        <option value="JarApplication" />
+        <option value="MavenRunConfiguration" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.RoleTest">
+    <configuration name="AppointmentControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="patient-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.test.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.test.controller.AppointmentControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BillingControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="patient-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.test.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.test.controller.BillingControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MedicalRecordControllerTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="patient-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.test.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.test.controller.MedicalRecordControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrescriptionControllerTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="patient-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.test.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.test.controller.PrescriptionControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RoleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="patient-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.test.model" />
+      <option name="MAIN_CLASS_NAME" value="com.test.model.RoleTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="advancedMD" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="advancedMD" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="authentication-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.auth.AuthApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DoctorApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="doctor-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.doc.DoctorApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PatientApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="patient-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.pat.PatientApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.AppointmentControllerTest" />
+      <item itemvalue="JUnit.BillingControllerTest" />
+      <item itemvalue="JUnit.MedicalRecordControllerTest (1)" />
+      <item itemvalue="JUnit.PrescriptionControllerTest (1)" />
+      <item itemvalue="JUnit.RoleTest" />
+      <item itemvalue="Spring Boot.PatientApp" />
+      <item itemvalue="Spring Boot.AuthApp" />
+      <item itemvalue="Spring Boot.DoctorApp" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.RoleTest" />
+        <item itemvalue="JUnit.BillingControllerTest" />
+        <item itemvalue="JUnit.AppointmentControllerTest" />
+        <item itemvalue="JUnit.MedicalRecordControllerTest (1)" />
+        <item itemvalue="JUnit.PrescriptionControllerTest (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d5159ccd-fd09-4e43-bf28-837b1d3940d1" name="Changes" comment="" />
+      <created>1729619507327</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729619507327</updated>
+      <workItem from="1729619514222" duration="42611000" />
+      <workItem from="1729769762218" duration="13506000" />
+      <workItem from="1729792138989" duration="4453000" />
+      <workItem from="1730193247676" duration="615000" />
+      <workItem from="1733411002706" duration="711000" />
+      <workItem from="1733678807859" duration="19099000" />
+      <workItem from="1733814570066" duration="655000" />
+      <workItem from="1733996469839" duration="3763000" />
+      <workItem from="1735499505819" duration="4754000" />
+      <workItem from="1736023247170" duration="3195000" />
+      <workItem from="1736095620486" duration="6086000" />
+      <workItem from="1736102739382" duration="19034000" />
+      <workItem from="1736771462495" duration="3038000" />
+      <workItem from="1737400498166" duration="11539000" />
+      <workItem from="1737543518914" duration="19327000" />
+    </task>
+    <task id="LOCAL-00093" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729779566208</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1729779566208</updated>
+    </task>
+    <task id="LOCAL-00094" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729779593792</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1729779593793</updated>
+    </task>
+    <task id="LOCAL-00095" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729780287759</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1729780287759</updated>
+    </task>
+    <task id="LOCAL-00096" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729780493307</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1729780493308</updated>
+    </task>
+    <task id="LOCAL-00097" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729780510888</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1729780510888</updated>
+    </task>
+    <task id="LOCAL-00098" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729780539362</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1729780539362</updated>
+    </task>
+    <task id="LOCAL-00099" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729783979479</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1729783979480</updated>
+    </task>
+    <task id="LOCAL-00100" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729784068303</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1729784068304</updated>
+    </task>
+    <task id="LOCAL-00101" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729784167417</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1729784167418</updated>
+    </task>
+    <task id="LOCAL-00102" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729784235806</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1729784235807</updated>
+    </task>
+    <task id="LOCAL-00103" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729784399758</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1729784399759</updated>
+    </task>
+    <task id="LOCAL-00104" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729792278639</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1729792278640</updated>
+    </task>
+    <task id="LOCAL-00105" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729792387825</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1729792387826</updated>
+    </task>
+    <task id="LOCAL-00106" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729794285195</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1729794285196</updated>
+    </task>
+    <task id="LOCAL-00107" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729794322861</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1729794322862</updated>
+    </task>
+    <task id="LOCAL-00108" summary="update ci">
+      <option name="closed" value="true" />
+      <created>1729794357885</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1729794357885</updated>
+    </task>
+    <task id="LOCAL-00109" summary="updated README.md">
+      <option name="closed" value="true" />
+      <created>1729795617364</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1729795617365</updated>
+    </task>
+    <task id="LOCAL-00110" summary="adapted models and controllers to database schema">
+      <option name="closed" value="true" />
+      <created>1733684678130</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1733684678148</updated>
+    </task>
+    <task id="LOCAL-00111" summary="adapted models and controllers and fixes it accroding to database schema. Now User signUp/signIn is working!">
+      <option name="closed" value="true" />
+      <created>1733692721023</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1733692721029</updated>
+    </task>
+    <task id="LOCAL-00112" summary="added webConfig for cross origins to avoid these error">
+      <option name="closed" value="true" />
+      <created>1733736503625</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1733736503628</updated>
+    </task>
+    <task id="LOCAL-00113" summary="modified AuthController to avoid cross origin error">
+      <option name="closed" value="true" />
+      <created>1733738537216</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1733738537217</updated>
+    </task>
+    <task id="LOCAL-00114" summary="modified AuthController and added signout">
+      <option name="closed" value="true" />
+      <created>1733745602721</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1733745602723</updated>
+    </task>
+    <task id="LOCAL-00115" summary="implemented doctor microservice with first controller and model Appointment.java">
+      <option name="closed" value="true" />
+      <created>1735900296955</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1735900296956</updated>
+    </task>
+    <task id="LOCAL-00116" summary="implemented models ToDos.java and copied Role.java, User.java and ERole.java from previous service">
+      <option name="closed" value="true" />
+      <created>1735901639855</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1735901639855</updated>
+    </task>
+    <task id="LOCAL-00117" summary="updated application.properties for specified ports and names">
+      <option name="closed" value="true" />
+      <created>1736026124171</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1736026124182</updated>
+    </task>
+    <task id="LOCAL-00118" summary="major update: fixed some bugs recording the jwt token so now authentication based on roles like ROLE_DOCTOR are working also implemented AppointmentController.java incl. Model and repository to test Doctor functionality with JPA.">
+      <option name="closed" value="true" />
+      <created>1736026254960</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1736026254961</updated>
+    </task>
+    <task id="LOCAL-00119" summary="added UNIT tests for doctor service and partly integration test for user service">
+      <option name="closed" value="true" />
+      <created>1736113084274</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1736113084285</updated>
+    </task>
+    <task id="LOCAL-00120" summary="added UNIT tests for doctor service and partly integration test for user service">
+      <option name="closed" value="true" />
+      <created>1736175028459</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1736175028465</updated>
+    </task>
+    <task id="LOCAL-00121" summary="improved UNIT tests for doctor service and partly integration test for user service">
+      <option name="closed" value="true" />
+      <created>1736774649404</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1736774649406</updated>
+    </task>
+    <task id="LOCAL-00122" summary="add jacoco reports">
+      <option name="closed" value="true" />
+      <created>1737401358470</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1737401358471</updated>
+    </task>
+    <task id="LOCAL-00123" summary="add jacoco xml to yml workflow for doctor service">
+      <option name="closed" value="true" />
+      <created>1737402593183</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1737402593183</updated>
+    </task>
+    <task id="LOCAL-00124" summary="modified jacoco in yaml">
+      <option name="closed" value="true" />
+      <created>1737405546568</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1737405546570</updated>
+    </task>
+    <task id="LOCAL-00125" summary="modified jacoco in yaml to get badges">
+      <option name="closed" value="true" />
+      <created>1737406057022</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1737406057023</updated>
+    </task>
+    <task id="LOCAL-00126" summary="modified jacoco in yaml to get badges">
+      <option name="closed" value="true" />
+      <created>1737406349499</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1737406349500</updated>
+    </task>
+    <task id="LOCAL-00127" summary="modified jacoco in yaml to get badges">
+      <option name="closed" value="true" />
+      <created>1737406377115</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1737406377115</updated>
+    </task>
+    <task id="LOCAL-00128" summary="modified jacoco in yaml to get badges">
+      <option name="closed" value="true" />
+      <created>1737406605711</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1737406605711</updated>
+    </task>
+    <task id="LOCAL-00129" summary="modified jacoco in yaml to get badges">
+      <option name="closed" value="true" />
+      <created>1737407037908</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1737407037909</updated>
+    </task>
+    <task id="LOCAL-00130" summary="modified jacoco in yaml to get badges">
+      <option name="closed" value="true" />
+      <created>1737407496238</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1737407496239</updated>
+    </task>
+    <task id="LOCAL-00131" summary="modified jacoco in yaml to get badges">
+      <option name="closed" value="true" />
+      <created>1737407622159</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1737407622160</updated>
+    </task>
+    <task id="LOCAL-00132" summary="modified jacoco in yaml to get badges">
+      <option name="closed" value="true" />
+      <created>1737407912275</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1737407912275</updated>
+    </task>
+    <task id="LOCAL-00133" summary="modified jacoco in yaml to get badges">
+      <option name="closed" value="true" />
+      <created>1737408356634</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1737408356634</updated>
+    </task>
+    <task id="LOCAL-00134" summary="modified jacoco in yaml to get badges">
+      <option name="closed" value="true" />
+      <created>1737408502373</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1737408502373</updated>
+    </task>
+    <task id="LOCAL-00135" summary="modified jacoco in yaml to get badges">
+      <option name="closed" value="true" />
+      <created>1737408995561</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1737408995562</updated>
+    </task>
+    <task id="LOCAL-00136" summary="improved application.propertiespropertie">
+      <option name="closed" value="true" />
+      <created>1737409919571</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1737409919572</updated>
+    </task>
+    <task id="LOCAL-00137" summary="patient service application.properties and checked jacoco">
+      <option name="closed" value="true" />
+      <created>1737410919656</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1737410919657</updated>
+    </task>
+    <task id="LOCAL-00138" summary="added patient service jacoco report to workflow">
+      <option name="closed" value="true" />
+      <created>1737411141820</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1737411141821</updated>
+    </task>
+    <task id="LOCAL-00139" summary="added AppointmentControllerTest.java">
+      <option name="closed" value="true" />
+      <created>1737411258852</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1737411258853</updated>
+    </task>
+    <task id="LOCAL-00140" summary="fixed workflow">
+      <option name="closed" value="true" />
+      <created>1737411399546</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1737411399547</updated>
+    </task>
+    <task id="LOCAL-00141" summary="fixed workflow">
+      <option name="closed" value="true" />
+      <created>1737411436803</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1737411436804</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/feature/2-role-based-access-control" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="main" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/feature/2-role-based-access-control" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="TEXT_FILTER_SETTINGS">
+                <TextFilterSettings>
+                  <option name="MATCH_CASE" value="true" />
+                </TextFilterSettings>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update ci" />
+    <MESSAGE value="updated README.md" />
+    <MESSAGE value="adapted models and controllers to database schmea" />
+    <MESSAGE value="adapted models and controllers and fixes it accroding to database schema. Now User signUp/signIn is working!" />
+    <MESSAGE value="added webConfig for cross origins to avoid these error" />
+    <MESSAGE value="modified AuthController to avoid cross origin error" />
+    <MESSAGE value="modified AuthController and added signout" />
+    <MESSAGE value="implemented doctor microservice with first controller and model Appointment.java" />
+    <MESSAGE value="implemented models ToDos.java and copied Role.java, User.java and ERole.java from previous service" />
+    <MESSAGE value="updated application.properties for specified ports and names" />
+    <MESSAGE value="major update: fixed some bugs recording the jwt token so now authentication based on roles like ROLE_DOCTOR are working also implemented AppointmentController.java incl. Model and repository to test Doctor functionality with JPA." />
+    <MESSAGE value="added integration tests for auth service" />
+    <MESSAGE value="added UNIT tests for doctor service and partly integration test for user service" />
+    <MESSAGE value="improved UNIT tests for doctor service and partly integration test for user service" />
+    <MESSAGE value="add jacoco reports" />
+    <MESSAGE value="add jacoco xml to yml workflow for doctor service" />
+    <MESSAGE value="modified jacoco in yaml" />
+    <MESSAGE value="modified jacoco in yaml to get badges" />
+    <MESSAGE value="added patient service incl. models, controller and repositories. Included also unit test for user." />
+    <MESSAGE value="improved application.propertiespropertie" />
+    <MESSAGE value="patient service application.properties and checked jacoco" />
+    <MESSAGE value="added patient service jacoco report to workflow" />
+    <MESSAGE value="added AppointmentControllerTest.java" />
+    <MESSAGE value="fixed workflow" />
+    <MESSAGE value="updated db file and also fixes some bugs, now all services start without problem" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated db file and also fixes some bugs, now all services start without problem" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/AdvancedMD_backend$JwtUtilsTest.ic" NAME="JwtUtilsTest Coverage Results" MODIFIED="1736175414426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.test.utils.*</FILTER>
+    </SUITE>
+  </component>
+</project>
