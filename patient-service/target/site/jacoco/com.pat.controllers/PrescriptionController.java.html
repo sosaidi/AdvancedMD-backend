@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PrescriptionController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">patient-service</a> &gt; <a href="index.source.html" class="el_package">com.pat.controllers</a> &gt; <span class="el_source">PrescriptionController.java</span></div><h1>PrescriptionController.java</h1><pre class="source lang-java linenums">package com.pat.controllers;
+
+import com.pat.models.Prescription;
+import com.pat.repository.PrescriptionRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+// Prescription Controller
+@RestController
+@CrossOrigin(origins = &quot;http://localhost:4200&quot;)
+@RequestMapping(&quot;/api/patient/prescription&quot;)
+@PreAuthorize(&quot;hasRole('ROLE_PATIENT')&quot;)
+<span class="fc" id="L18">public class PrescriptionController {</span>
+
+    @Autowired
+    private PrescriptionRepository prescriptionRepository;
+
+    @PostMapping
+    public ResponseEntity&lt;Prescription&gt; createPrescription(@RequestBody Prescription prescription) {
+<span class="fc" id="L25">        Prescription savedPrescription = prescriptionRepository.save(prescription);</span>
+<span class="fc" id="L26">        return new ResponseEntity&lt;&gt;(savedPrescription, HttpStatus.CREATED);</span>
+    }
+
+    @GetMapping(&quot;/{id}&quot;)
+    public ResponseEntity&lt;Prescription&gt; getPrescriptionById(@PathVariable int id) {
+<span class="fc" id="L31">        return prescriptionRepository.findById(id)</span>
+<span class="fc" id="L32">                .map(prescription -&gt; new ResponseEntity&lt;&gt;(prescription, HttpStatus.OK))</span>
+<span class="fc" id="L33">                .orElse(new ResponseEntity&lt;&gt;(HttpStatus.NOT_FOUND));</span>
+    }
+
+    @GetMapping
+    public List&lt;Prescription&gt; getAllPrescriptions() {
+<span class="fc" id="L38">        return prescriptionRepository.findAll();</span>
+    }
+
+    @PutMapping(&quot;/{id}&quot;)
+    public ResponseEntity&lt;Prescription&gt; updatePrescription(@PathVariable int id, @RequestBody Prescription prescriptionDetails) {
+<span class="fc" id="L43">        return prescriptionRepository.findById(id)</span>
+<span class="fc" id="L44">                .map(prescription -&gt; {</span>
+<span class="fc" id="L45">                    prescription.setRecordId(prescriptionDetails.getRecordId());</span>
+<span class="fc" id="L46">                    prescription.setMedicationName(prescriptionDetails.getMedicationName());</span>
+<span class="fc" id="L47">                    prescription.setDosage(prescriptionDetails.getDosage());</span>
+<span class="fc" id="L48">                    prescription.setInstructions(prescriptionDetails.getInstructions());</span>
+<span class="fc" id="L49">                    Prescription updatedPrescription = prescriptionRepository.save(prescription);</span>
+<span class="fc" id="L50">                    return new ResponseEntity&lt;&gt;(updatedPrescription, HttpStatus.OK);</span>
+                })
+<span class="fc" id="L52">                .orElse(new ResponseEntity&lt;&gt;(HttpStatus.NOT_FOUND));</span>
+    }
+
+    @DeleteMapping(&quot;/{id}&quot;)
+    public ResponseEntity&lt;Void&gt; deletePrescription(@PathVariable int id) {
+<span class="fc bfc" id="L57" title="All 2 branches covered.">        if (prescriptionRepository.existsById(id)) {</span>
+<span class="fc" id="L58">            prescriptionRepository.deleteById(id);</span>
+<span class="fc" id="L59">            return new ResponseEntity&lt;&gt;(HttpStatus.NO_CONTENT);</span>
+        } else {
+<span class="fc" id="L61">            return new ResponseEntity&lt;&gt;(HttpStatus.NOT_FOUND);</span>
+        }
+    }
+}
+
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
