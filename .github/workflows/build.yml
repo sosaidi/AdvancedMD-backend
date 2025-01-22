@@ -69,7 +69,7 @@ jobs:
                 message: 'commit badge'
                 add: '*.svg'
 
-      - name: Generate JaCoCo Badges for Authentication service
+      - name: Generate JaCoCo Badges for Patient service
         id: jacocoMod3
         uses: cicirello/jacoco-badge-generator@v2
         with:

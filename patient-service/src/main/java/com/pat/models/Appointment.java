@@ -10,6 +10,7 @@ public class Appointment {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "app_id", nullable = false)
   private Long appId;
 
   @Column(name = "patient_id", nullable = false)

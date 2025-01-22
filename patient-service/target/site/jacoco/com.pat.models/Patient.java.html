@@ -1,164 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Patient.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">patient-service</a> &gt; <a href="index.source.html" class="el_package">com.pat.models</a> &gt; <span class="el_source">Patient.java</span></div><h1>Patient.java</h1><pre class="source lang-java linenums">package com.pat.models;
 
+
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
-import java.util.Date;
+
+import java.time.LocalDate;
 
 @Entity
 @Table(name = &quot;patients&quot;)
-public class Patient {
+<span class="fc" id="L10">public class Patient {</span>
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int patient_id;
+    @Column(name = &quot;patient_id&quot;)
+    private int patientId;
 
-    @NotBlank
-    private int user_id;
+    @Column(name = &quot;user_id&quot;, nullable = false)
+    private int userId;
 
-    @NotBlank
-    @Size(max = 255)
+    @Column(name = &quot;firstname&quot;, nullable = false)
     private String firstname;
 
-    @NotBlank
-    @Size(max = 255)
+    @Column(name = &quot;lastname&quot;, nullable = false)
     private String lastname;
 
-    @NotBlank
-    private Date dob;
+    @Column(name = &quot;dob&quot;, nullable = false)
+    private LocalDate dob;
 
-    @NotBlank
-    @Size(max = 50)
+    @Column(name = &quot;gender&quot;, nullable = false)
     private String gender;
 
-    @Size(max = 255)
+    @Column(name = &quot;address&quot;)
     private String address;
 
-    @Size(max = 50)
-    private String phone_number;
+    @Column(name = &quot;phone_number&quot;)
+    private String phoneNumber;
 
-    private Date admission_date;
+    @Column(name = &quot;admission_date&quot;)
+    private LocalDate admissionDate;
 
-    private Date discharge_date;
+    @Column(name = &quot;discharge_date&quot;)
+    private LocalDate dischargeDate;
 
-    @Size(max = 50)
+    @Column(name = &quot;status&quot;)
     private String status;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = &quot;user_id&quot;, referencedColumnName = &quot;user_id&quot;, insertable = false, updatable = false)
-    private User user;
-
-<span class="nc" id="L51">    public Patient() {</span>
-<span class="nc" id="L52">    }</span>
-
-    public Patient(int user_id, String firstname, String lastname, Date dob, String gender, String address,
-<span class="nc" id="L55">                   String phone_number, Date admission_date, Date discharge_date, String status) {</span>
-<span class="nc" id="L56">        this.user_id = user_id;</span>
-<span class="nc" id="L57">        this.firstname = firstname;</span>
-<span class="nc" id="L58">        this.lastname = lastname;</span>
-<span class="nc" id="L59">        this.dob = dob;</span>
-<span class="nc" id="L60">        this.gender = gender;</span>
-<span class="nc" id="L61">        this.address = address;</span>
-<span class="nc" id="L62">        this.phone_number = phone_number;</span>
-<span class="nc" id="L63">        this.admission_date = admission_date;</span>
-<span class="nc" id="L64">        this.discharge_date = discharge_date;</span>
-<span class="nc" id="L65">        this.status = status;</span>
-<span class="nc" id="L66">    }</span>
-
+    // Getters and Setters
     public int getPatientId() {
-<span class="nc" id="L69">        return patient_id;</span>
+<span class="fc" id="L49">        return patientId;</span>
     }
 
-    public void setPatientId(int patient_id) {
-<span class="nc" id="L73">        this.patient_id = patient_id;</span>
-<span class="nc" id="L74">    }</span>
+    public void setPatientId(int patientId) {
+<span class="fc" id="L53">        this.patientId = patientId;</span>
+<span class="fc" id="L54">    }</span>
 
     public int getUserId() {
-<span class="nc" id="L77">        return user_id;</span>
+<span class="fc" id="L57">        return userId;</span>
     }
 
-    public void setUserId(int user_id) {
-<span class="nc" id="L81">        this.user_id = user_id;</span>
-<span class="nc" id="L82">    }</span>
+    public void setUserId(int userId) {
+<span class="fc" id="L61">        this.userId = userId;</span>
+<span class="fc" id="L62">    }</span>
 
     public String getFirstname() {
-<span class="nc" id="L85">        return firstname;</span>
+<span class="fc" id="L65">        return firstname;</span>
     }
 
     public void setFirstname(String firstname) {
-<span class="nc" id="L89">        this.firstname = firstname;</span>
-<span class="nc" id="L90">    }</span>
+<span class="fc" id="L69">        this.firstname = firstname;</span>
+<span class="fc" id="L70">    }</span>
 
     public String getLastname() {
-<span class="nc" id="L93">        return lastname;</span>
+<span class="fc" id="L73">        return lastname;</span>
     }
 
     public void setLastname(String lastname) {
-<span class="nc" id="L97">        this.lastname = lastname;</span>
-<span class="nc" id="L98">    }</span>
+<span class="fc" id="L77">        this.lastname = lastname;</span>
+<span class="fc" id="L78">    }</span>
 
-    public Date getDob() {
-<span class="nc" id="L101">        return dob;</span>
+    public LocalDate getDob() {
+<span class="fc" id="L81">        return dob;</span>
     }
 
-    public void setDob(Date dob) {
-<span class="nc" id="L105">        this.dob = dob;</span>
-<span class="nc" id="L106">    }</span>
+    public void setDob(LocalDate dob) {
+<span class="fc" id="L85">        this.dob = dob;</span>
+<span class="fc" id="L86">    }</span>
 
     public String getGender() {
-<span class="nc" id="L109">        return gender;</span>
+<span class="fc" id="L89">        return gender;</span>
     }
 
     public void setGender(String gender) {
-<span class="nc" id="L113">        this.gender = gender;</span>
-<span class="nc" id="L114">    }</span>
+<span class="fc" id="L93">        this.gender = gender;</span>
+<span class="fc" id="L94">    }</span>
 
     public String getAddress() {
-<span class="nc" id="L117">        return address;</span>
+<span class="fc" id="L97">        return address;</span>
     }
 
     public void setAddress(String address) {
-<span class="nc" id="L121">        this.address = address;</span>
-<span class="nc" id="L122">    }</span>
+<span class="fc" id="L101">        this.address = address;</span>
+<span class="fc" id="L102">    }</span>
 
     public String getPhoneNumber() {
-<span class="nc" id="L125">        return phone_number;</span>
+<span class="fc" id="L105">        return phoneNumber;</span>
     }
 
-    public void setPhoneNumber(String phone_number) {
-<span class="nc" id="L129">        this.phone_number = phone_number;</span>
-<span class="nc" id="L130">    }</span>
+    public void setPhoneNumber(String phoneNumber) {
+<span class="fc" id="L109">        this.phoneNumber = phoneNumber;</span>
+<span class="fc" id="L110">    }</span>
 
-    public Date getAdmissionDate() {
-<span class="nc" id="L133">        return admission_date;</span>
+    public LocalDate getAdmissionDate() {
+<span class="fc" id="L113">        return admissionDate;</span>
     }
 
-    public void setAdmissionDate(Date admission_date) {
-<span class="nc" id="L137">        this.admission_date = admission_date;</span>
-<span class="nc" id="L138">    }</span>
+    public void setAdmissionDate(LocalDate admissionDate) {
+<span class="fc" id="L117">        this.admissionDate = admissionDate;</span>
+<span class="fc" id="L118">    }</span>
 
-    public Date getDischargeDate() {
-<span class="nc" id="L141">        return discharge_date;</span>
+    public LocalDate getDischargeDate() {
+<span class="fc" id="L121">        return dischargeDate;</span>
     }
 
-    public void setDischargeDate(Date discharge_date) {
-<span class="nc" id="L145">        this.discharge_date = discharge_date;</span>
-<span class="nc" id="L146">    }</span>
+    public void setDischargeDate(LocalDate dischargeDate) {
+<span class="fc" id="L125">        this.dischargeDate = dischargeDate;</span>
+<span class="fc" id="L126">    }</span>
 
     public String getStatus() {
-<span class="nc" id="L149">        return status;</span>
+<span class="fc" id="L129">        return status;</span>
     }
 
     public void setStatus(String status) {
-<span class="nc" id="L153">        this.status = status;</span>
-<span class="nc" id="L154">    }</span>
-
-    public User getUser() {
-<span class="nc" id="L157">        return user;</span>
-    }
-
-    public void setUser(User user) {
-<span class="nc" id="L161">        this.user = user;</span>
-<span class="nc" id="L162">    }</span>
+<span class="fc" id="L133">        this.status = status;</span>
+<span class="fc" id="L134">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

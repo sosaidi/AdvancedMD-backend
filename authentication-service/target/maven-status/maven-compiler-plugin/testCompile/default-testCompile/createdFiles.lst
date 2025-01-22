@@ -1,4 +1,5 @@
-com/test/utils/JwtUtilsTest.class
-com/test/service/UserDetailsServiceImplTest.class
 com/test/repository/UserRepositoryTest.class
+com/test/security/jwt/AuthTokenFilterTest.class
+com/test/security/service/UserDetailsServiceImplTest.class
+com/test/security/jwt/JwtUtilsTest.class
 com/test/controller/AuthControllerTest.class

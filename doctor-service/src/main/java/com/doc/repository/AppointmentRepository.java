@@ -19,7 +19,7 @@ public interface AppointmentRepository extends JpaRepository<Appointment, Long> 
 
   Optional<Appointment> findByAppId(Long appId);
 
-  // Change return type to void
+
   Boolean deleteByAppId(Long appId);
 
   // Find appointments within a date range

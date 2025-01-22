@@ -11,17 +11,17 @@ import com.auth.models.User;
 import com.auth.repository.UserRepository;
 
 @Service
-<span class="fc" id="L14">public class UserDetailsServiceImpl implements UserDetailsService {</span>
+<span class="nc" id="L14">public class UserDetailsServiceImpl implements UserDetailsService {</span>
   @Autowired
   public UserRepository userRepository;
 
   @Override
   @Transactional
   public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-<span class="fc" id="L21">    User user = userRepository.findByUsername(username)</span>
-<span class="fc" id="L22">        .orElseThrow(() -&gt; new UsernameNotFoundException(&quot;User Not Found with username: &quot; + username));</span>
+<span class="nc" id="L21">    User user = userRepository.findByUsername(username)</span>
+<span class="nc" id="L22">        .orElseThrow(() -&gt; new UsernameNotFoundException(&quot;User Not Found with username: &quot; + username));</span>
 
-<span class="fc" id="L24">    return UserDetailsImpl.build(user);</span>
+<span class="nc" id="L24">    return UserDetailsImpl.build(user);</span>
   }
 
 }

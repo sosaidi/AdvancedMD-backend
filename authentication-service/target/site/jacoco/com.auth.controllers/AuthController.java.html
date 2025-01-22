@@ -74,57 +74,58 @@ import com.auth.security.services.UserDetailsImpl;
 
   @PostMapping(&quot;/signup&quot;)
   public ResponseEntity&lt;?&gt; registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
-<span class="fc bfc" id="L77" title="All 2 branches covered.">    if (userRepository.existsByUsername(signUpRequest.getUsername())) {</span>
-<span class="fc" id="L78">      return ResponseEntity</span>
-<span class="fc" id="L79">          .badRequest()</span>
-<span class="fc" id="L80">          .body(new MessageResponse(&quot;Error: Username is already taken!&quot;));</span>
+<span class="fc" id="L77">    System.out.println(&quot;tryy&quot;);</span>
+<span class="fc bfc" id="L78" title="All 2 branches covered.">    if (userRepository.existsByUsername(signUpRequest.getUsername())) {</span>
+<span class="fc" id="L79">      return ResponseEntity</span>
+<span class="fc" id="L80">          .badRequest()</span>
+<span class="fc" id="L81">          .body(new MessageResponse(&quot;Error: Username is already taken!&quot;));</span>
     }
 
     // Create new user's account
-<span class="fc" id="L84">    User user = new User(signUpRequest.getUsername(),</span>
-<span class="fc" id="L85">               encoder.encode(signUpRequest.getPassword()));</span>
+<span class="fc" id="L85">    User user = new User(signUpRequest.getUsername(),</span>
+<span class="fc" id="L86">               encoder.encode(signUpRequest.getPassword()));</span>
 
-<span class="fc" id="L87">    Set&lt;String&gt; strRoles = signUpRequest.getRole();</span>
-<span class="fc" id="L88">    Set&lt;Role&gt; roles = new HashSet&lt;&gt;();</span>
+<span class="fc" id="L88">    Set&lt;String&gt; strRoles = signUpRequest.getRole();</span>
+<span class="fc" id="L89">    Set&lt;Role&gt; roles = new HashSet&lt;&gt;();</span>
 
-<span class="pc bpc" id="L90" title="1 of 2 branches missed.">    if (strRoles == null) {</span>
-<span class="nc" id="L91">      Role userRole = roleRepository.findByName(ERole.ROLE_PATIENT)</span>
-<span class="nc" id="L92">          .orElseThrow(() -&gt; new RuntimeException(&quot;Error: Role is not found.&quot;));</span>
-<span class="nc" id="L93">      roles.add(userRole);</span>
-<span class="nc" id="L94">    } else {</span>
-<span class="fc" id="L95">      strRoles.forEach(role -&gt; {</span>
-<span class="pc bpc" id="L96" title="2 of 3 branches missed.">        switch (role) {</span>
+<span class="pc bpc" id="L91" title="1 of 2 branches missed.">    if (strRoles == null) {</span>
+<span class="nc" id="L92">      Role userRole = roleRepository.findByName(ERole.ROLE_PATIENT)</span>
+<span class="nc" id="L93">          .orElseThrow(() -&gt; new RuntimeException(&quot;Error: Role is not found.&quot;));</span>
+<span class="nc" id="L94">      roles.add(userRole);</span>
+<span class="nc" id="L95">    } else {</span>
+<span class="fc" id="L96">      strRoles.forEach(role -&gt; {</span>
+<span class="pc bpc" id="L97" title="2 of 3 branches missed.">        switch (role) {</span>
         case &quot;ROLE_ADMIN&quot;:
-<span class="fc" id="L98">          Role adminRole = roleRepository.findByName(ERole.ROLE_ADMIN)</span>
-<span class="pc" id="L99">              .orElseThrow(() -&gt; new RuntimeException(&quot;Error: Role is not found.&quot;));</span>
-<span class="fc" id="L100">          roles.add(adminRole);</span>
+<span class="fc" id="L99">          Role adminRole = roleRepository.findByName(ERole.ROLE_ADMIN)</span>
+<span class="pc" id="L100">              .orElseThrow(() -&gt; new RuntimeException(&quot;Error: Role is not found.&quot;));</span>
+<span class="fc" id="L101">          roles.add(adminRole);</span>
 
-<span class="fc" id="L102">          break;</span>
+<span class="fc" id="L103">          break;</span>
         case &quot;ROLE_STAFF&quot;:
-<span class="nc" id="L104">          Role modRole = roleRepository.findByName(ERole.ROLE_STAFF)</span>
-<span class="nc" id="L105">              .orElseThrow(() -&gt; new RuntimeException(&quot;Error: Role is not found.&quot;));</span>
-<span class="nc" id="L106">          roles.add(modRole);</span>
+<span class="nc" id="L105">          Role modRole = roleRepository.findByName(ERole.ROLE_STAFF)</span>
+<span class="nc" id="L106">              .orElseThrow(() -&gt; new RuntimeException(&quot;Error: Role is not found.&quot;));</span>
+<span class="nc" id="L107">          roles.add(modRole);</span>
 
-<span class="nc" id="L108">          break;</span>
+<span class="nc" id="L109">          break;</span>
         default:
-<span class="nc" id="L110">          Role userRole = roleRepository.findByName(ERole.ROLE_PATIENT)</span>
-<span class="nc" id="L111">              .orElseThrow(() -&gt; new RuntimeException(&quot;Error: Role is not found.&quot;));</span>
-<span class="nc" id="L112">          roles.add(userRole);</span>
+<span class="nc" id="L111">          Role userRole = roleRepository.findByName(ERole.ROLE_PATIENT)</span>
+<span class="nc" id="L112">              .orElseThrow(() -&gt; new RuntimeException(&quot;Error: Role is not found.&quot;));</span>
+<span class="nc" id="L113">          roles.add(userRole);</span>
         }
-<span class="fc" id="L114">      });</span>
+<span class="fc" id="L115">      });</span>
     }
 
-<span class="fc" id="L117">    user.setRoles(roles);</span>
-<span class="fc" id="L118">    userRepository.save(user);</span>
+<span class="fc" id="L118">    user.setRoles(roles);</span>
+<span class="fc" id="L119">    userRepository.save(user);</span>
 
-<span class="fc" id="L120">    return ResponseEntity.ok(new MessageResponse(&quot;User registered successfully!&quot;));</span>
+<span class="fc" id="L121">    return ResponseEntity.ok(new MessageResponse(&quot;User registered successfully!&quot;));</span>
   }
   @PostMapping(&quot;/signout&quot;)
   public ResponseEntity&lt;?&gt; logoutUser() {
     // Clear authentication from the sec
     // urity context
-<span class="fc" id="L126">    SecurityContextHolder.clearContext();</span>
-<span class="fc" id="L127">    return ResponseEntity.ok(new MessageResponse(&quot;User logged out successfully&quot;));</span>
+<span class="fc" id="L127">    SecurityContextHolder.clearContext();</span>
+<span class="fc" id="L128">    return ResponseEntity.ok(new MessageResponse(&quot;User logged out successfully&quot;));</span>
   }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

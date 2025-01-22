@@ -1,9 +1,9 @@
 package com.pat.models;
 
+
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
-import java.util.Date;
+
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "patients")
@@ -11,71 +11,54 @@ public class Patient {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int patient_id;
+    @Column(name = "patient_id")
+    private int patientId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", referencedColumnName = "user_id", insertable = false, updatable = false)
-    private User user;
+    @Column(name = "user_id", nullable = false)
+    private int userId;
 
-    @NotBlank
-    @Size(max = 255)
+    @Column(name = "firstname", nullable = false)
     private String firstname;
 
-    @NotBlank
-    @Size(max = 255)
+    @Column(name = "lastname", nullable = false)
     private String lastname;
 
-    @NotBlank
-    private Date dob;
+    @Column(name = "dob", nullable = false)
+    private LocalDate dob;
 
-    @NotBlank
-    @Size(max = 50)
+    @Column(name = "gender", nullable = false)
     private String gender;
 
-    @Size(max = 255)
+    @Column(name = "address")
     private String address;
 
-    @Size(max = 50)
-    private String phone_number;
+    @Column(name = "phone_number")
+    private String phoneNumber;
 
-    private Date admission_date;
+    @Column(name = "admission_date")
+    private LocalDate admissionDate;
 
-    private Date discharge_date;
+    @Column(name = "discharge_date")
+    private LocalDate dischargeDate;
 
-    @Size(max = 50)
+    @Column(name = "status")
     private String status;
 
-    public Patient() {
-    }
-
-    public Patient(int user_id, String firstname, String lastname, Date dob, String gender, String address,
-                   String phone_number, Date admission_date, Date discharge_date, String status) {
-        this.patient_id = user_id;
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.dob = dob;
-        this.gender = gender;
-        this.address = address;
-        this.phone_number = phone_number;
-        this.admission_date = admission_date;
-        this.discharge_date = discharge_date;
-        this.status = status;
-    }
-
+    // Getters and Setters
     public int getPatientId() {
-        return patient_id;
+        return patientId;
     }
 
-    public void setPatientId(int patient_id) {
-        this.patient_id = patient_id;
+    public void setPatientId(int patientId) {
+        this.patientId = patientId;
     }
 
     public int getUserId() {
-        return user.getId();
+        return userId;
     }
 
-    public void setUserId(int user_id) {
-        this.patient_id = user_id;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public String getFirstname() {
@@ -94,11 +77,11 @@ public class Patient {
         this.lastname = lastname;
     }
 
-    public Date getDob() {
+    public LocalDate getDob() {
         return dob;
     }
 
-    public void setDob(Date dob) {
+    public void setDob(LocalDate dob) {
         this.dob = dob;
     }
 
@@ -119,27 +102,27 @@ public class Patient {
     }
 
     public String getPhoneNumber() {
-        return phone_number;
+        return phoneNumber;
     }
 
-    public void setPhoneNumber(String phone_number) {
-        this.phone_number = phone_number;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
-    public Date getAdmissionDate() {
-        return admission_date;
+    public LocalDate getAdmissionDate() {
+        return admissionDate;
     }
 
-    public void setAdmissionDate(Date admission_date) {
-        this.admission_date = admission_date;
+    public void setAdmissionDate(LocalDate admissionDate) {
+        this.admissionDate = admissionDate;
     }
 
-    public Date getDischargeDate() {
-        return discharge_date;
+    public LocalDate getDischargeDate() {
+        return dischargeDate;
     }
 
-    public void setDischargeDate(Date discharge_date) {
-        this.discharge_date = discharge_date;
+    public void setDischargeDate(LocalDate dischargeDate) {
+        this.dischargeDate = dischargeDate;
     }
 
     public String getStatus() {
@@ -148,13 +131,5 @@ public class Patient {
 
     public void setStatus(String status) {
         this.status = status;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 }

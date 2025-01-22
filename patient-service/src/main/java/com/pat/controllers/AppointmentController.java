@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("/api/doctor/appointment")
-@PreAuthorize("hasRole('ROLE_STAFF')")
+@RequestMapping("/api/patient/appointment")
+@PreAuthorize("hasRole('ROLE_PATIENT')")
 public class AppointmentController {
 
   @Autowired

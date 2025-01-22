@@ -16,6 +16,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -95,4 +96,44 @@ public class AppointmentControllerTest {
         // Validate that the response status is OK (200)
         assertEquals(200, response.getStatusCodeValue());  // 200 OK for successful update
     }
+
+    // Test for getAppointmentById(Long)
+    @Test
+    void getAppointmentById_Existing() {
+        when(appointmentRepository.findByAppId(any(Long.class))).thenReturn(Optional.of(appointment));  // Simulate appointment found
+
+        ResponseEntity<Appointment> response = appointmentController.getAppointmentById(1L);
+
+        // Validate response status and body
+        assertEquals(200, response.getStatusCodeValue());  // 200 OK for found appointment
+        assertEquals(appointment.getAppId(), response.getBody().getAppId());  // Verify that the appointment ID matches
+    }
+
+    // Test for getAllAppointments()
+    @Test
+    void getAllAppointments() {
+        // Mock the repository to return a list of appointments
+        when(appointmentRepository.findAll()).thenReturn(java.util.List.of(appointment));
+
+        // Call the controller's getAllAppointments method
+        List<Appointment> response = appointmentController.getAllAppointments();
+
+        // Validate that the response is a list and contains one appointment
+        assertEquals(1, response.size());  // Expecting one appointment in the list
+        assertEquals(appointment.getAppId(), response.get(0).getAppId());  // Check if the appointment ID is the same
+    }
+
+
+    // Test for deleteAppointment(Long)
+    @Test
+    void deleteAppointment_Existing() {
+        when(appointmentRepository.existsById(any(Long.class))).thenReturn(true);  // Simulate appointment exists
+
+        ResponseEntity<MessageResponse> response = (ResponseEntity<MessageResponse>) appointmentController.deleteAppointment(1L);
+
+        // Validate the response status for successful deletion
+        assertEquals(204, response.getStatusCodeValue());  // 204 No Content
+    }
+
+
 }

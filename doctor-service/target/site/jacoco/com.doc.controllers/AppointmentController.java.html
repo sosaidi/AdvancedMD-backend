@@ -23,14 +23,14 @@ import org.springframework.web.bind.annotation.*;
   // Get all appointments
   @GetMapping
   public List&lt;Appointment&gt; getAllAppointments() {
-<span class="nc" id="L26">    return appointmentRepository.findAll();</span>
+<span class="fc" id="L26">    return appointmentRepository.findAll();</span>
   }
 
   // Get appointment by ID
   @GetMapping(&quot;/{id}&quot;)
   public ResponseEntity&lt;Appointment&gt; getAppointmentById(@PathVariable Long id) {
-<span class="nc" id="L32">    Optional&lt;Appointment&gt; appointment = appointmentRepository.findById(id);</span>
-<span class="nc" id="L33">    return appointment.map(ResponseEntity::ok).orElseGet(() -&gt; ResponseEntity.notFound().build());</span>
+<span class="fc" id="L32">    Optional&lt;Appointment&gt; appointment = appointmentRepository.findByAppId(id);</span>
+<span class="pc" id="L33">    return appointment.map(ResponseEntity::ok).orElseGet(() -&gt; ResponseEntity.notFound().build());</span>
   }
 
   // Create new appointment

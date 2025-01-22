@@ -18,21 +18,21 @@ import org.springframework.security.web.authentication.WebAuthenticationDetailsS
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-<span class="nc" id="L21">public class AuthTokenFilter extends OncePerRequestFilter {</span>
+<span class="fc" id="L21">public class AuthTokenFilter extends OncePerRequestFilter {</span>
   @Autowired
   private JwtUtils jwtUtils;
 
   @Autowired
   private UserDetailsServiceImpl userDetailsService;
 
-<span class="nc" id="L28">  private static final Logger logger = LoggerFactory.getLogger(AuthTokenFilter.class);</span>
+<span class="fc" id="L28">  private static final Logger logger = LoggerFactory.getLogger(AuthTokenFilter.class);</span>
 
   @Override
-  protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
+  public void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
       throws ServletException, IOException {
     try {
-<span class="nc" id="L34">      String jwt = parseJwt(request);</span>
-<span class="nc bnc" id="L35" title="All 4 branches missed.">      if (jwt != null &amp;&amp; jwtUtils.validateJwtToken(jwt)) {</span>
+<span class="fc" id="L34">      String jwt = parseJwt(request);</span>
+<span class="pc bpc" id="L35" title="1 of 4 branches missed.">      if (jwt != null &amp;&amp; jwtUtils.validateJwtToken(jwt)) {</span>
 <span class="nc" id="L36">        String username = jwtUtils.getUserNameFromJwtToken(jwt);</span>
 
 <span class="nc" id="L38">        UserDetails userDetails = userDetailsService.loadUserByUsername(username);</span>
@@ -45,21 +45,21 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 <span class="nc" id="L46">        SecurityContextHolder.getContext().setAuthentication(authentication);</span>
       }
-<span class="nc" id="L48">    } catch (Exception e) {</span>
-<span class="nc" id="L49">      logger.error(&quot;Cannot set user authentication: {}&quot;, e);</span>
-<span class="nc" id="L50">    }</span>
+<span class="fc" id="L48">    } catch (Exception e) {</span>
+<span class="fc" id="L49">      logger.error(&quot;Cannot set user authentication: {}&quot;, e);</span>
+<span class="fc" id="L50">    }</span>
 
-<span class="nc" id="L52">    filterChain.doFilter(request, response);</span>
-<span class="nc" id="L53">  }</span>
+<span class="fc" id="L52">    filterChain.doFilter(request, response);</span>
+<span class="fc" id="L53">  }</span>
 
   private String parseJwt(HttpServletRequest request) {
-<span class="nc" id="L56">    String headerAuth = request.getHeader(&quot;Authorization&quot;);</span>
+<span class="fc" id="L56">    String headerAuth = request.getHeader(&quot;Authorization&quot;);</span>
 
-<span class="nc bnc" id="L58" title="All 4 branches missed.">    if (StringUtils.hasText(headerAuth) &amp;&amp; headerAuth.startsWith(&quot;Bearer &quot;)) {</span>
-<span class="nc" id="L59">      return headerAuth.substring(7);</span>
+<span class="pc bpc" id="L58" title="1 of 4 branches missed.">    if (StringUtils.hasText(headerAuth) &amp;&amp; headerAuth.startsWith(&quot;Bearer &quot;)) {</span>
+<span class="fc" id="L59">      return headerAuth.substring(7);</span>
     }
 
-<span class="nc" id="L62">    return null;</span>
+<span class="fc" id="L62">    return null;</span>
   }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

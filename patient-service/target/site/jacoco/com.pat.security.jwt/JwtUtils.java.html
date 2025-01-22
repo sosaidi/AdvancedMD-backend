@@ -15,29 +15,29 @@ import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
 
 @Component
-<span class="nc" id="L18">public class JwtUtils {</span>
-<span class="nc" id="L19">  private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);</span>
+<span class="fc" id="L18">public class JwtUtils {</span>
+<span class="fc" id="L19">  private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);</span>
 
   @Value(&quot;${bezkoder.app.jwtSecret}&quot;)
-  private String jwtSecret;
+  public String jwtSecret;
 
   @Value(&quot;${bezkoder.app.jwtExpirationMs}&quot;)
-  private int jwtExpirationMs;
+  public int jwtExpirationMs;
 
   public String generateJwtToken(Authentication authentication) {
 
-<span class="nc" id="L29">    UserDetailsImpl userPrincipal = (UserDetailsImpl) authentication.getPrincipal();</span>
+<span class="fc" id="L29">    UserDetailsImpl userPrincipal = (UserDetailsImpl) authentication.getPrincipal();</span>
 
-<span class="nc" id="L31">    return Jwts.builder()</span>
-<span class="nc" id="L32">        .setSubject((userPrincipal.getUsername()))</span>
-<span class="nc" id="L33">        .setIssuedAt(new Date())</span>
-<span class="nc" id="L34">        .setExpiration(new Date((new Date()).getTime() + jwtExpirationMs))</span>
-<span class="nc" id="L35">        .signWith(key(), SignatureAlgorithm.HS256)</span>
-<span class="nc" id="L36">        .compact();</span>
+<span class="fc" id="L31">    return Jwts.builder()</span>
+<span class="fc" id="L32">        .setSubject((userPrincipal.getUsername()))</span>
+<span class="fc" id="L33">        .setIssuedAt(new Date())</span>
+<span class="fc" id="L34">        .setExpiration(new Date((new Date()).getTime() + jwtExpirationMs))</span>
+<span class="fc" id="L35">        .signWith(key(), SignatureAlgorithm.HS256)</span>
+<span class="fc" id="L36">        .compact();</span>
   }
   
   private Key key() {
-<span class="nc" id="L40">    return Keys.hmacShaKeyFor(Decoders.BASE64.decode(jwtSecret));</span>
+<span class="fc" id="L40">    return Keys.hmacShaKeyFor(Decoders.BASE64.decode(jwtSecret));</span>
   }
 
   public String getUserNameFromJwtToken(String token) {
@@ -47,7 +47,7 @@ import io.jsonwebtoken.security.Keys;
 
   public boolean validateJwtToken(String authToken) {
 
-<span class="nc" id="L50">    return true;</span>
+<span class="fc" id="L50">    return true;</span>
   }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
